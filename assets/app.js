@@ -99,6 +99,16 @@
     return el("button", { cls: "linkbtn", text: text, attrs: { type: "button", "aria-label": name },
                           on: { click: function () { fn(this); } } });
   }
+  function daysAgo(dateStr) {
+    if (!dateStr || !T.status.checked_at) return null;
+    var d = (Date.parse(T.status.checked_at) - Date.parse(dateStr)) / 864e5;
+    return isNaN(d) ? null : Math.max(0, Math.floor(d));
+  }
+  function freshText(dateStr) {
+    var n = daysAgo(dateStr);
+    if (n == null) return "";
+    return n === 0 ? "today" : n === 1 ? "1 day ago" : n < 60 ? n + " days ago" : Math.round(n / 30) + " months ago";
+  }
   function shortHash(h) { return h ? String(h).slice(0, 12) + "…" : ""; }
   var announceTimer = null;
   function announce(msg) {          // polite status message for screen readers after a filter or view change
@@ -319,12 +329,12 @@
   if (!SHOW_RATINGS) {
     tiles.appendChild(tile("Tracked documents", String(sources.length),
       withApi.length + " checked automatically, " + (sources.length - withApi.length) + " by hand; " +
-      (roles.length - emptyRoles.length) + " of " + roles.length + " roles have a tracked document", "documents"));
+      (roles.length - emptyRoles.length) + " of " + roles.length + " roles have a tracked document", "/documents"));
     tiles.appendChild(tile("Updated in the last 30 days", String(recent.length) + " / " + withApi.length,
-      "Document fact: new revision, commit or update reported by the registry", "documents"));
+      "New revision, commit or update reported by the registry", "/documents", [layer("doc")]));
     tiles.appendChild(tile("Current references to replaced drafts", String(replacedRefs.length),
-      "Document fact (Datatracker): a current revision cites a draft that has since been replaced", "references"));
-    tiles.appendChild(tile("Related drafts found", String(drafts.length), draftSub, "discovered-section"));
+      "A current revision cites a draft that has since been replaced (Datatracker)", "/references", [layer("doc")]));
+    tiles.appendChild(tile("Related drafts found", String(drafts.length), draftSub, "/drafts", [layer("auto")]));
   } else {
   tiles.appendChild(tile("Tracked documents", String(sources.length),
     cols.length + " rated in the matrix, " + (sources.length - cols.length) + " status only; " +
@@ -347,10 +357,8 @@
     head(t, ["Area", "Examples", "Status", "Note"]);
     var tb = el("tbody");
     (cov.areas || []).forEach(function (r) {
-      var cls = r.status === "tracked" ? "explicit" : r.status === "partly" ? "partial" : r.status === "status only" ? "external" :
-                r.status === "out of scope" ? "unreviewed" : "unspecified";
       tb.appendChild(el("tr", {}, [el("td", { text: r.area }), el("td", { text: r.examples }),
-        el("td", {}, [badge(cls, r.status)]), el("td", { text: r.note || "" })]));
+        el("td", {}, [el("span", { cls: "pill", text: r.status })]), el("td", { text: r.note || "" })]));
     });
     t.appendChild(tb);
     if (cov.scope_frozen) $("scope-not-tool").textContent += " " + cov.scope_frozen;
@@ -614,7 +622,8 @@
       ["Generated", fmtTime(BUILD.generated_at) + (BUILD.where ? " (" + BUILD.where + ")" : "")],
       ["Source commit", commit ? el("a", { href: "https://github.com/" + repo + "/commit/" + commit, text: commit }) : "not recorded (local run)"],
       ["Workflow run", BUILD.run_url ? el("a", { href: BUILD.run_url, text: "run " + BUILD.run_id }) : null],
-      ["SHA-256 of curated files", Object.keys(BUILD.curated_sha256 || {}).map(function (f) { return "data/" + f + ": " + BUILD.curated_sha256[f]; })]
+      ["SHA-256 of curated files", el("details", {}, [el("summary", { text: Object.keys(BUILD.curated_sha256 || {}).length + " files" }),
+        el("ul", { cls: "plain mono" }, Object.keys(BUILD.curated_sha256 || {}).map(function (f) { return el("li", { text: "data/" + f + ": " + BUILD.curated_sha256[f] }); }))])]
     ]));
     var fb = $("footer-build");
     if (fb) fb.textContent = "Data v" + (BUILD.tracker_version || "?") + ", generated " + fmtTime(BUILD.generated_at) + (commit ? " from commit " + commit.slice(0, 7) : " (local run)") + ".";
@@ -796,7 +805,7 @@
   function renderDocs() {
     var t = $("sources");
     t.textContent = "";
-    head(t, ["Document", "Type", "Roles (researcher)", "Version", "State", "Updated"].concat(SHOW_RATINGS ? ["Evidence review"] : []));
+    head(t, ["Document", "Type", "Roles (researcher)", "Version", "State", "Last change"].concat(SHOW_RATINGS ? ["Evidence review"] : []));
     var tb = el("tbody");
     docHits = 0;
     sources.forEach(function (s) {
@@ -810,13 +819,17 @@
         el("td", {}, [st.version || "", st.published ? el("span", { cls: "sig", text: "published " + st.published }) : null,
                       sb ? el("span", { cls: "sig", text: "stability: " + sb.value }) : null]),
         el("td", {}, [docState(st), mt.norm ? el("span", { cls: "sig", text: "maturity (rule): " + mt.norm }) : null]),
-        el("td", { cls: "nowrap", text: st.updated || "" }),
+        el("td", { cls: "nowrap" }, [st.updated || (st.published ? "published " + st.published : ""),
+          st.updated ? el("span", { cls: "sig", text: (st.source === "checked by hand" ? "checked by hand, " : "") + freshText(st.updated) }) : null]),
         SHOW_RATINGS ? el("td", {}, [s.matrix ? reviewBadge(s.id) : el("span", { cls: "muted", text: "status only" })]) : null
       ]));
     });
+    var researchShown = 0;
     research.forEach(function (r, i) {
       var type = (CLS.related_research_types || {})[String(i)] || "Research";
       if (!hit([r.title, type].join(" "))) return;
+      if (!researchShown++) tb.appendChild(el("tr", { cls: "cat-row" }, [el("th", { text: "Related work (not tracked)",
+        attrs: { colspan: String(SHOW_RATINGS ? 7 : 6), scope: "colgroup" } })]));
       docHits += 1;
       tb.appendChild(el("tr", {}, [el("td", {}, [el("a", { href: r.url, text: r.title })]),
         el("td", {}, [type, el("span", { cls: "sig", text: "researcher label" })]),
@@ -824,7 +837,7 @@
         SHOW_RATINGS ? el("td", { text: "" }) : null]));
     });
     t.appendChild(tb);
-    $("doc-count").textContent = "(" + (S.q ? docHits + " of " : "") + (sources.length + research.length) + ")";
+    $("doc-count").textContent = "(" + (S.q ? docHits + " matching; " : "") + sources.length + " tracked + " + research.length + " related work)";
     var er = $("empty-roles");
     if (er) er.textContent = emptyRoles.length ? "Roles with no tracked document (researcher roles): " + emptyRoles.map(function (r) { return r.name; }).join(", ") + "." : "";
   }
@@ -842,25 +855,40 @@
            : r.state === "unread" ? "not read yet" : "done (rated at current revision)";
     return { s: s, txt: txt, affected: filled ? filled + " of " + rows.length + " questions rated" : "no cells rated", rr: rr };
   }
-  function renderChanges() {
-    var t = $("changes");
-    t.textContent = "";
-    head(t, ["Date", "Document", "Change", "Evidence affected", "Re-review"]);
-    var tb = el("tbody");
-    changeHits = 0;
-    changes.slice(0, 60).forEach(function (c) {
-      var i = changeInfo(c);
-      var name = i.s ? i.s.short : c.id;
-      if (!hit([name, c.id, i.txt].join(" "))) return;
-      changeHits += 1;
-      var doc = i.s ? linkBtn(name, function (b) { openDoc(i.s.id, b); }, "Details: " + name)
-                    : el("a", { href: "https://datatracker.ietf.org/doc/" + encodeURIComponent(c.id) + "/", text: c.id });
-      tb.appendChild(el("tr", {}, [el("td", { cls: "nowrap", text: c.date }), el("td", {}, [doc]), el("td", { text: i.txt }),
-                                   el("td", { text: i.affected }), el("td", { text: i.rr })]));
+  function timelineInto(box, list, limit) {
+    box.textContent = "";
+    var byDate = [], seen = {};
+    list.slice(0, limit).forEach(function (c) {
+      if (!seen[c.date]) { seen[c.date] = { date: c.date, items: [] }; byDate.push(seen[c.date]); }
+      seen[c.date].items.push(c);
     });
-    if (!changeHits) tb.appendChild(el("tr", {}, [el("td", { text: S.q ? "No matching changes." : "No changes recorded yet.", attrs: { colspan: "5" } })]));
-    t.appendChild(tb);
-    $("changes-count").textContent = "(" + (S.q ? changeHits + " matching, " : "") + (changes.length > 60 ? "latest 60 of " : "") + changes.length + ")";
+    byDate.forEach(function (g) {
+      var ul = el("ul", { cls: "plain" });
+      g.items.forEach(function (c) {
+        var i = changeInfo(c), name = i.s ? i.s.short : c.id;
+        var doc = i.s ? linkBtn(name, function (b) { openDoc(i.s.id, b); }, "Details: " + name)
+                      : el("a", { href: "https://datatracker.ietf.org/doc/" + encodeURIComponent(c.id) + "/", text: c.id });
+        ul.appendChild(el("li", {}, [doc, " · " + i.txt,
+          (SHOW_RATINGS && i.rr) ? el("span", { cls: "sig", text: "Evidence affected: " + (i.affected || "none") + "; re-review: " + i.rr }) : null]));
+      });
+      box.appendChild(el("li", {}, [el("time", { text: g.date, attrs: { datetime: g.date } }), ul]));
+    });
+    if (!byDate.length) box.appendChild(el("li", { cls: "muted", text: S.q ? "No matching changes." : "No changes recorded yet." }));
+  }
+  function renderChanges() {
+    var matching = changes.filter(function (c) {
+      var i = changeInfo(c), name = i.s ? i.s.short : c.id;
+      return hit([name, c.id, i.txt].join(" "));
+    });
+    changeHits = matching.length;
+    var box = $("changes");
+    box.textContent = "";
+    var ol = el("ol", { cls: "timeline" });
+    box.appendChild(ol);
+    timelineInto(ol, matching, 200);
+    $("changes-count").textContent = "(" + (S.q ? changeHits + " matching of " : "") + changes.length + ")";
+    var home = $("home-timeline");
+    if (home && !S.q) timelineInto(home, changes, 5);
   }
 
   // ------------------------------------------------------------------ related drafts
@@ -889,8 +917,16 @@
 
   // ------------------------------------------------------------------ search
   function updateInfo() {
-    $("q-info").textContent = S.q ? "Matches: " + (SHOW_RATINGS ? matrixHits + " questions, " : "") + docHits + " documents, " + refHits + " references, " +
-      changeHits + " changes, " + draftHits + " related drafts." : "";
+    var box = $("q-info");
+    box.textContent = "";
+    if (!S.q) return;
+    var parts = [["documents", docHits, "documents"], ["references", refHits, "references"], ["drafts", draftHits, "related drafts"], ["changes", changeHits, "changes"]];
+    if (SHOW_RATINGS) parts.unshift(["matrix", matrixHits, "questions"]);
+    box.appendChild(document.createTextNode("Matches: "));
+    parts.forEach(function (p, k) {
+      if (k) box.appendChild(document.createTextNode(" · "));
+      box.appendChild(el("a", { text: p[1] + " " + p[2], attrs: { href: "#/" + p[0] } }));
+    });
   }
   var timer = null;
   $("q").addEventListener("input", function () {
@@ -906,7 +942,7 @@
   // ------------------------------------------------------------------ detail panel
   var dlg = $("panel"), lastFocus = null;
   function setHash(h) {
-    try { history.replaceState(null, "", h ? "#" + h : location.pathname + location.search); } catch (e) { /* file:// */ }
+    try { history.replaceState(null, "", h ? "#" + h : "#/" + currentView); } catch (e) { /* file:// */ }
   }
   function showPanel(title, nodes, opener, hash) {
     if (!dlg.open) lastFocus = opener || document.activeElement;
@@ -1284,6 +1320,89 @@
     b.addEventListener("click", function () { EXPORTS[b.getAttribute("data-export")](); });
   });
 
+  // ------------------------------------------------------------------ views (one page, one view at a time)
+  var VIEW_NAMES = { home: "Overview", documents: "Documents", matrix: "Specification status", questions: "Question view",
+                     review: "Review queue", references: "References", drafts: "Related drafts", changes: "Changes",
+                     provenance: "Provenance", about: "About" };
+  var RATING_VIEWS = { matrix: 1, questions: 1, review: 1 };
+  var currentView = "home";
+  function showView(v, focus) {
+    if (!VIEW_NAMES[v] || (RATING_VIEWS[v] && !SHOW_RATINGS)) v = "home";
+    var changed = v !== currentView;
+    currentView = v;
+    Array.prototype.forEach.call(document.querySelectorAll("main > section[data-view]"), function (s) {
+      var on = s.getAttribute("data-view") === v;
+      if (s.hasAttribute("data-ratings") && !SHOW_RATINGS) on = false;
+      s.hidden = !on;
+    });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-view-link]"), function (a) {
+      if (a.getAttribute("data-view-link") === v) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    document.title = (v === "home" ? "" : VIEW_NAMES[v] + " · ") + "Agent Audit Tracker";
+    if (focus && changed) {
+      window.scrollTo(0, 0);
+      var h = document.querySelector('main > section[data-view="' + v + '"] .view-title');
+      if (h) h.focus({ preventScroll: true });
+      announce("Showing " + VIEW_NAMES[v] + ".");
+    }
+  }
+  function route(fromHashChange) {
+    var h = location.hash || "", m;
+    if ((m = /^#\/([a-z]+)$/.exec(h))) { showView(m[1], fromHashChange); return; }
+    if ((m = /^#doc=([\w-]+)$/.exec(h))) { showView("documents", false); openDoc(m[1], null); return; }
+    if (SHOW_RATINGS && (m = /^#cell=([\w-]+)\/([\w-]+)$/.exec(h))) { showView("matrix", false); openCell(m[1], m[2], null); return; }
+    if (SHOW_RATINGS && (m = /^#question=([\w-]+)$/.exec(h))) { showView("questions", false); openQuestion(m[1], null); return; }
+    if (h.length > 1 && /^#[\w-]+$/.test(h)) {        // old section anchors such as #method or #documents
+      var target = document.getElementById(h.slice(1));
+      var sec = target && target.closest("main > section[data-view]");
+      if (sec) { showView(sec.getAttribute("data-view"), false); target.scrollIntoView(); return; }
+    }
+    showView("home", fromHashChange);
+  }
+
+  // ------------------------------------------------------------------ source health (monitoring-style status line)
+  function renderHealth() {
+    var box = $("health");
+    if (!box) return;
+    var auto = sources.filter(function (s) { return s.track.type !== "manual"; });
+    var failed = [];
+    sources.forEach(function (s) {
+      var st = status[s.id] || {};
+      if (st.error) failed.push(s.short + " (status)");
+      if ((TEXTS[s.id] || {}).error) failed.push(s.short + " (text hash)");
+      var r = (REFS.documents || {})[s.id];
+      if (r && r.error) failed.push(s.short + " (references)");
+    });
+    if ((T.status.discovery_errors || []).length) failed.push("related-draft search");
+    var manual = sources.filter(function (s) { return s.track.type === "manual"; });
+    var due = manual.filter(function (s) { var n = daysAgo((status[s.id] || {}).updated); return n != null && n > 365; });
+    var ok = !failed.length;
+    box.className = "health " + (ok ? "health-ok" : "health-warn");
+    box.textContent = "";
+    box.appendChild(el("span", { cls: "health-mark", text: ok ? "✓" : "!", attrs: { "aria-hidden": "true" } }));
+    box.appendChild(el("span", {}, [
+      el("strong", { text: ok ? "All " + auto.length + " automatic checks succeeded" : failed.length + " automatic check" + (failed.length === 1 ? "" : "s") + " failed: " + failed.join(", ") + ". Last known values are shown" }),
+      " in the last run (" + (fmtTime(T.status.checked_at) || "never") + (BUILD.where ? ", " + BUILD.where : "") +
+        (BUILD.source_commit ? ", commit " + BUILD.source_commit.slice(0, 7) : "") + "). " +
+        manual.length + " documents are checked by hand" + (due.length ? "; check due: " + due.map(function (s) { return s.short; }).join(", ") : "; none overdue") + "."
+    ]));
+  }
+
+  // ------------------------------------------------------------------ theme (not stored: the page keeps nothing in the browser)
+  function setupTheme() {
+    var btn = $("theme-btn");
+    if (!btn) return;
+    var modes = ["auto", "light", "dark"], k = 0;
+    function apply() {
+      var m = modes[k];
+      if (m === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", m);
+      btn.textContent = "Theme: " + m;
+      btn.setAttribute("aria-label", "Colour theme: " + m + ". Activate to change.");
+    }
+    btn.addEventListener("click", function () { k = (k + 1) % modes.length; apply(); announce("Colour theme: " + modes[k] + "."); });
+    apply();
+  }
+
   // ------------------------------------------------------------------ start
   buildFilters();
   buildRefControls();
@@ -1292,8 +1411,10 @@
   renderDrafts();
   renderRefs();
   renderMatrix();
-  var mh = /^#(doc|cell|question)=([\w-]+)(?:\/([\w-]+))?$/.exec(location.hash || "");
-  if (mh && mh[1] === "doc") openDoc(mh[2], null);
-  if (SHOW_RATINGS && mh && mh[1] === "cell" && mh[3]) openCell(mh[2], mh[3], null);
-  if (SHOW_RATINGS && mh && mh[1] === "question") openQuestion(mh[2], null);
+  renderHealth();
+  setupTheme();
+  var methodRatings = $("method-ratings");
+  if (methodRatings && SHOW_RATINGS) methodRatings.open = true;
+  window.addEventListener("hashchange", function () { route(true); });
+  route(false);
 })();
