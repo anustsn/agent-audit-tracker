@@ -1,0 +1,64 @@
+{
+  "about": "Researcher classification. The evidence questions (rows) are defined by the researcher, not by any standard. Ratings go in 'mappings', one entry per document, only after the document has been read: {\"verified\": {\"rev\" or \"sha\" or \"updated\", \"read_on\", \"by\", \"sections\"}, \"basis\", \"cells\": {row id: {\"status\", \"text\", \"ids\", \"where\"}}}. A missing cell means not reviewed. No ratings are published yet.",
+  "legend": {
+    "explicit": "Explicitly specified: the document defines a field that answers the question.",
+    "partial": "Partially specified: a field answers part of the question, or only in some deployments.",
+    "external": "Referenced externally: the document leaves this to another named specification (needs a document-backed reference and section).",
+    "check": "To check: a related field exists; its meaning still has to be checked.",
+    "unspecified": "Not specified: the document was read and does not define it.",
+    "unreviewed": "Not reviewed: nobody has checked this yet. This is not evidence that the document is silent."
+  },
+  "rows": [
+    {
+      "id": "agent",
+      "question": "Which agent acted?",
+      "signals": "S01"
+    },
+    {
+      "id": "verified",
+      "question": "Was the agent's identity verified, and at what level?",
+      "signals": "S02"
+    },
+    {
+      "id": "principal",
+      "question": "On whose behalf did it act?",
+      "signals": "S03, S06"
+    },
+    {
+      "id": "credential",
+      "question": "With which credential or token?",
+      "signals": "S04"
+    },
+    {
+      "id": "decision",
+      "question": "Was the action authorised, and under which policy?",
+      "signals": "S05, S13"
+    },
+    {
+      "id": "tool",
+      "question": "Which tool, and which tool version or schema hash?",
+      "signals": "S14, S17"
+    },
+    {
+      "id": "action",
+      "question": "What action was taken, with what outcome?",
+      "signals": "S14, S16"
+    },
+    {
+      "id": "correlation",
+      "question": "Can records be linked across a session or workflow?",
+      "signals": "S08"
+    },
+    {
+      "id": "integrity",
+      "question": "Is the record tamper-evident?",
+      "signals": ""
+    },
+    {
+      "id": "recorder",
+      "question": "Who writes the record: the agent itself or an independent component?",
+      "signals": ""
+    }
+  ],
+  "mappings": {}
+}

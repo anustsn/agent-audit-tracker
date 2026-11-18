@@ -1,0 +1,4 @@
+{
+  "about": "Publication setting, decided by the maintainer. show_ratings: false shows the catalogue only (document facts, references, related drafts, provenance). It only hides parts of the page: everything in data/ is public in the repository and in the JSON export. Add ratings to fields.json only when they are ready to be published, then set show_ratings to true.",
+  "show_ratings": false
+}

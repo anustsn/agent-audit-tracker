@@ -1,0 +1,10 @@
+{
+  "about": "Facts stated by the documents, recorded by hand with revision and section. Requirement levels are quoted as the document writes them (for example REQUIRED, Conditionally Required, SHOULD, Opt-In). An empty entry means not recorded yet, not that the document is silent. 'stability' is the implementation stability a specification declares; it is kept separate from document maturity.",
+  "requirement_levels": {},
+  "stability": {
+    "otel-genai": {
+      "value": "development",
+      "pointer": "attribute stability in the model/ YAML at e6658f1 (all GenAI, MCP and A2A attributes)"
+    }
+  }
+}

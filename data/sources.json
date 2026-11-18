@@ -1,0 +1,265 @@
+{
+  "about": "What is tracked and how its status is fetched ('track'). Researcher classification (roles, document types) is in classification.json.",
+  "sources": [
+    {
+      "id": "otel-genai",
+      "short": "OTel GenAI",
+      "group": "OpenTelemetry",
+      "title": "OpenTelemetry GenAI semantic conventions (agents, tools, MCP, A2A)",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai",
+      "track": {
+        "type": "github_repo",
+        "repo": "open-telemetry/semantic-conventions-genai"
+      },
+      "matrix": true
+    },
+    {
+      "id": "otel-pr-350",
+      "short": "OTel PR #350",
+      "group": "OpenTelemetry",
+      "title": "PR #350: gen_ai.agent.identity.id and gen_ai.agent.identity.name",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/pull/350",
+      "track": {
+        "type": "github_pr",
+        "repo": "open-telemetry/semantic-conventions-genai",
+        "number": 350
+      },
+      "matrix": true
+    },
+    {
+      "id": "otel-core-4022",
+      "short": "OTel IAM issue",
+      "group": "OpenTelemetry",
+      "title": "Issue #4022: Semantic conventions for IAM",
+      "url": "https://github.com/open-telemetry/semantic-conventions/issues/4022",
+      "track": {
+        "type": "github_issue",
+        "repo": "open-telemetry/semantic-conventions",
+        "number": 4022
+      },
+      "matrix": false
+    },
+    {
+      "id": "ietf-aat",
+      "short": "Agent Audit Trail",
+      "group": "IETF",
+      "title": "Agent Audit Trail: A Standard Logging Format for Autonomous AI Systems",
+      "url": "https://datatracker.ietf.org/doc/draft-sharif-agent-audit-trail/",
+      "track": {
+        "type": "ietf",
+        "name": "draft-sharif-agent-audit-trail"
+      },
+      "matrix": true
+    },
+    {
+      "id": "ietf-aims",
+      "short": "AIMS",
+      "group": "IETF",
+      "title": "AI Identity Management System (AIMS)",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/",
+      "track": {
+        "type": "ietf",
+        "name": "draft-ietf-wimse-aims"
+      },
+      "note": "Replaces draft-klrc-aiagent-auth.",
+      "matrix": true
+    },
+    {
+      "id": "ietf-gilda",
+      "short": "Gilda audit record",
+      "group": "IETF",
+      "title": "An Audit Record Format for AI Agent Authorization Decisions",
+      "url": "https://datatracker.ietf.org/doc/draft-gilda-audit-agent-audit-record/",
+      "track": {
+        "type": "ietf",
+        "name": "draft-gilda-audit-agent-audit-record"
+      },
+      "note": "Replaces draft-gilda-wimse-agent-audit-record.",
+      "matrix": true
+    },
+    {
+      "id": "ietf-munoz",
+      "short": "Muñoz evidence",
+      "group": "IETF",
+      "title": "Signed Authorization-Evidence Records for WIMSE-Authorized AI Agent Actions",
+      "url": "https://datatracker.ietf.org/doc/draft-munoz-wimse-authorization-evidence/",
+      "track": {
+        "type": "ietf",
+        "name": "draft-munoz-wimse-authorization-evidence"
+      },
+      "matrix": true
+    },
+    {
+      "id": "nist-nccoe",
+      "short": "NIST NCCoE",
+      "group": "NIST",
+      "title": "NCCoE: Accelerating the Adoption of Software and AI Agent Identity and Authorization (concept paper and project hub)",
+      "url": "https://www.nccoe.nist.gov/publications/other/accelerating-adoption-software-and-ai-agent-identity-and-authorization-concept",
+      "track": {
+        "type": "github_repo",
+        "repo": "usnistgov/nccoe-ai-identity"
+      },
+      "note": "Concept paper 5 Feb 2026; comment summary on the project hub (pages.nist.gov/nccoe-ai-identity). Status tracks the hub repository.",
+      "matrix": false
+    },
+    {
+      "id": "owasp-asi",
+      "short": "OWASP Agentic",
+      "group": "OWASP",
+      "title": "OWASP Top 10 for Agentic Applications 2026",
+      "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+      "track": {
+        "type": "manual",
+        "version": "PDF released 9 Dec 2025",
+        "checked": "2026-11-13"
+      },
+      "matrix": false
+    },
+    {
+      "id": "owasp-mcp",
+      "short": "OWASP MCP",
+      "group": "OWASP",
+      "title": "OWASP MCP Top 10 (2025, beta)",
+      "url": "https://github.com/OWASP/www-project-mcp-top-10",
+      "track": {
+        "type": "github_repo",
+        "repo": "OWASP/www-project-mcp-top-10"
+      },
+      "matrix": false
+    },
+    {
+      "id": "iso-27001-a815",
+      "short": "ISO 27001 A.8.15",
+      "group": "Audit controls",
+      "title": "ISO/IEC 27001:2022, Annex A control 8.15 (Logging)",
+      "url": "https://www.iso.org/standard/27001",
+      "track": {
+        "type": "manual",
+        "version": "2022",
+        "checked": "2026-11-16"
+      },
+      "matrix": false
+    },
+    {
+      "id": "pci-dss-10",
+      "short": "PCI DSS Req. 10",
+      "group": "Audit controls",
+      "title": "PCI DSS v4.0.1, Requirement 10 (log and monitor access; 10.2 audit logs)",
+      "url": "https://www.pcisecuritystandards.org/document_library/",
+      "track": {
+        "type": "manual",
+        "version": "v4.0.1",
+        "checked": "2026-11-16"
+      },
+      "matrix": false
+    },
+    {
+      "id": "rfc-8693",
+      "short": "RFC 8693",
+      "group": "IETF",
+      "title": "RFC 8693: OAuth 2.0 Token Exchange",
+      "url": "https://www.rfc-editor.org/rfc/rfc8693",
+      "track": {
+        "type": "rfc",
+        "number": 8693
+      },
+      "note": "Status only; not read for this tracker.",
+      "matrix": false
+    },
+    {
+      "id": "rfc-9449",
+      "short": "RFC 9449",
+      "group": "IETF",
+      "title": "RFC 9449: OAuth 2.0 Demonstrating Proof of Possession (DPoP)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9449",
+      "track": {
+        "type": "rfc",
+        "number": 9449
+      },
+      "note": "Status only; not read for this tracker.",
+      "matrix": false
+    },
+    {
+      "id": "rfc-9943",
+      "short": "RFC 9943 (SCITT)",
+      "group": "IETF",
+      "title": "RFC 9943: An Architecture for Trustworthy and Transparent Digital Supply Chains (SCITT)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9943",
+      "track": {
+        "type": "rfc",
+        "number": 9943
+      },
+      "note": "Status only; not read for this tracker. Published from draft-ietf-scitt-architecture.",
+      "matrix": false
+    },
+    {
+      "id": "mcp-spec",
+      "short": "MCP specification",
+      "group": "Model Context Protocol project",
+      "title": "Model Context Protocol specification",
+      "url": "https://modelcontextprotocol.io/specification",
+      "track": {
+        "type": "github_repo",
+        "repo": "modelcontextprotocol/modelcontextprotocol"
+      },
+      "note": "Status only; not read for this tracker. Tracks the latest commit of the specification repository.",
+      "matrix": false
+    },
+    {
+      "id": "a2a-spec",
+      "short": "A2A specification",
+      "group": "A2A project (Linux Foundation)",
+      "title": "Agent2Agent (A2A) protocol specification",
+      "url": "https://a2a-protocol.org/",
+      "track": {
+        "type": "github_repo",
+        "repo": "a2aproject/A2A",
+        "path": "specification"
+      },
+      "note": "Status only; not read for this tracker. Tracks the latest commit to the specification folder.",
+      "matrix": false
+    },
+    {
+      "id": "nist-800-53",
+      "short": "NIST SP 800-53",
+      "group": "NIST",
+      "title": "NIST SP 800-53 Rev. 5, Security and Privacy Controls (families AU, IA and AC)",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "track": {
+        "type": "github_repo",
+        "repo": "usnistgov/oscal-content",
+        "path": "nist.gov/SP800-53/rev5"
+      },
+      "note": "Status only; not read for this tracker. Tracks the latest commit to NIST's OSCAL version of the catalogue.",
+      "matrix": false
+    },
+    {
+      "id": "eu-ai-act",
+      "short": "EU AI Act Art. 12",
+      "group": "European Union",
+      "title": "EU AI Act, Regulation (EU) 2024/1689: Article 12 (record-keeping) and Article 26(6) (deployers keeping logs)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "track": {
+        "type": "manual",
+        "version": "Regulation (EU) 2024/1689, OJ 12 July 2024",
+        "checked": "2026-11-18"
+      },
+      "note": "Checked by hand; not read for this tracker. Later amendments are not tracked; see the consolidated text on EUR-Lex. Nothing here is legal advice.",
+      "matrix": false
+    }
+  ],
+  "related_research": [
+    {
+      "title": "Solozobov, Property-Level Reconstructability of Agent Decisions: An Anchor-Level Pilot Across Vendor SDK Adapter Regimes (arXiv 2605.12078, preprint)",
+      "url": "https://arxiv.org/abs/2605.12078"
+    },
+    {
+      "title": "Bánáti, Pardi, Érsok, supplementary material for \"Bringing AI and Agentic AI Systems under SOC Supervision\" (Zenodo)",
+      "url": "https://doi.org/10.5281/zenodo.23739618"
+    },
+    {
+      "title": "Enkhzorigt, Agent telemetry coverage: OWASP agentic and MCP monitoring guidance versus OpenTelemetry GenAI semantic conventions (dataset, v0.1)",
+      "url": "https://github.com/anustsn/agent-telemetry-coverage"
+    }
+  ]
+}

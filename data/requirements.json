@@ -1,0 +1,1413 @@
+{
+ "about": "Which OWASP requirement units need each monitoring signal, and how well the OpenTelemetry GenAI conventions cover the signal. Identifiers only; read the requirement text in the OWASP documents.",
+ "provenance": {
+  "dataset": "agent-telemetry-coverage",
+  "version": "0.1.0",
+  "url": "https://github.com/anustsn/agent-telemetry-coverage",
+  "files": [
+   "data/units_extracted.csv",
+   "data/units_coded.csv",
+   "data/signals_coded.csv"
+  ],
+  "note": "Single-coder coding (v0.1). Second-coder adjudication for v0.2 is pending; counts may change.",
+  "coverage_codes": "C covered; P partial (a: opt-in content only, b: part of the signal, c: attribute exists but not used by GenAI/MCP/A2A); N not covered."
+ },
+ "signals": {
+  "S01": {
+   "name": "Agent identifier",
+   "layer": "identity",
+   "otel_coverage": "P-b",
+   "units": [
+    {
+     "unit": "MCP01-DET6",
+     "source": "owasp-mcp",
+     "risk_id": "MCP01",
+     "risk": "Token Mismanagement and Secret Exposure"
+    },
+    {
+     "unit": "MCP02-DET3",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP02-DET6",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP02-REM7",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP03-REM4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP03",
+     "risk": "Tool Poisoning"
+    },
+    {
+     "unit": "MCP07-DET1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    },
+    {
+     "unit": "MCP07-DET3",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    },
+    {
+     "unit": "MCP08-PRE1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP10-PRE17",
+     "source": "owasp-mcp",
+     "risk_id": "MCP10",
+     "risk": "Context Injection & Over-Sharing"
+    }
+   ]
+  },
+  "S02": {
+   "name": "Verified agent identity",
+   "layer": "identity",
+   "otel_coverage": "N",
+   "units": [
+    {
+     "unit": "ASI07-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI07",
+     "risk": "Insecure Inter-Agent Communication"
+    },
+    {
+     "unit": "ASI08-M10",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI10-M5",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "MCP03-PRE18",
+     "source": "owasp-mcp",
+     "risk_id": "MCP03",
+     "risk": "Tool Poisoning"
+    }
+   ]
+  },
+  "S03": {
+   "name": "Human principal",
+   "layer": "identity",
+   "otel_coverage": "P-c",
+   "units": [
+    {
+     "unit": "ASI01-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "MCP01-DET6",
+     "source": "owasp-mcp",
+     "risk_id": "MCP01",
+     "risk": "Token Mismanagement and Secret Exposure"
+    },
+    {
+     "unit": "MCP08-PRE1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S04": {
+   "name": "Credential/token use",
+   "layer": "identity",
+   "otel_coverage": "N",
+   "units": [
+    {
+     "unit": "ASI02-M4",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI03-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI03",
+     "risk": "Identity and Privilege Abuse"
+    },
+    {
+     "unit": "ASI03-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI03",
+     "risk": "Identity and Privilege Abuse"
+    },
+    {
+     "unit": "ASI03-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI03",
+     "risk": "Identity and Privilege Abuse"
+    },
+    {
+     "unit": "ASI04-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI04",
+     "risk": "Agentic Supply Chain Vulnerabilities"
+    },
+    {
+     "unit": "MCP01-DET5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP01",
+     "risk": "Token Mismanagement and Secret Exposure"
+    },
+    {
+     "unit": "MCP01-DET6",
+     "source": "owasp-mcp",
+     "risk_id": "MCP01",
+     "risk": "Token Mismanagement and Secret Exposure"
+    },
+    {
+     "unit": "MCP02-DET3",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP02-DET4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP02-REM5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP07-PRE13",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    },
+    {
+     "unit": "MCP07-PRE24",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    },
+    {
+     "unit": "MCP07-DET1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    },
+    {
+     "unit": "MCP07-DET5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    }
+   ]
+  },
+  "S05": {
+   "name": "AuthN/AuthZ outcome",
+   "layer": "identity",
+   "otel_coverage": "P-b",
+   "units": [
+    {
+     "unit": "ASI03-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI03",
+     "risk": "Identity and Privilege Abuse"
+    },
+    {
+     "unit": "MCP07-PRE23",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    },
+    {
+     "unit": "MCP07-PRE24",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    },
+    {
+     "unit": "MCP07-DET2",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    },
+    {
+     "unit": "MCP07-DET4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    }
+   ]
+  },
+  "S06": {
+   "name": "Delegation chain",
+   "layer": "identity",
+   "otel_coverage": "P-b",
+   "units": [
+    {
+     "unit": "ASI03-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI03",
+     "risk": "Identity and Privilege Abuse"
+    },
+    {
+     "unit": "ASI03-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI03",
+     "risk": "Identity and Privilege Abuse"
+    },
+    {
+     "unit": "ASI03-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI03",
+     "risk": "Identity and Privilege Abuse"
+    },
+    {
+     "unit": "ASI04-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI04",
+     "risk": "Agentic Supply Chain Vulnerabilities"
+    },
+    {
+     "unit": "ASI08-M10",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI10-M1",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    }
+   ]
+  },
+  "S07": {
+   "name": "Permission change",
+   "layer": "identity",
+   "otel_coverage": "N",
+   "units": [
+    {
+     "unit": "ASI03-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI03",
+     "risk": "Identity and Privilege Abuse"
+    },
+    {
+     "unit": "MCP02-DET2",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP02-REM5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP02-REM7",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    }
+   ]
+  },
+  "S08": {
+   "name": "Session / trace correlation id",
+   "layer": "correlation",
+   "otel_coverage": "C",
+   "units": [
+    {
+     "unit": "ASI07-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI07",
+     "risk": "Insecure Inter-Agent Communication"
+    },
+    {
+     "unit": "MCP01-DET5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP01",
+     "risk": "Token Mismanagement and Secret Exposure"
+    },
+    {
+     "unit": "MCP02-REM7",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP03-PRE18",
+     "source": "owasp-mcp",
+     "risk_id": "MCP03",
+     "risk": "Tool Poisoning"
+    },
+    {
+     "unit": "MCP08-PRE1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP08-PRE5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP08-PRE19",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP08-PRE20",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S09": {
+   "name": "Timestamp",
+   "layer": "correlation",
+   "otel_coverage": "C",
+   "units": [
+    {
+     "unit": "ASI07-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI07",
+     "risk": "Insecure Inter-Agent Communication"
+    },
+    {
+     "unit": "ASI08-M10",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "MCP08-PRE1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S10": {
+   "name": "Goal / intent identifier",
+   "layer": "goal",
+   "otel_coverage": "N",
+   "units": [
+    {
+     "unit": "ASI01-M4",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI01-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI03-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI03",
+     "risk": "Identity and Privilege Abuse"
+    },
+    {
+     "unit": "ASI07-M2",
+     "source": "owasp-asi",
+     "risk_id": "ASI07",
+     "risk": "Insecure Inter-Agent Communication"
+    },
+    {
+     "unit": "ASI10-M5",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "MCP06-PRE5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP06",
+     "risk": "Intent Flow Subversion"
+    }
+   ]
+  },
+  "S11": {
+   "name": "Action sequence",
+   "layer": "goal",
+   "otel_coverage": "C",
+   "units": [
+    {
+     "unit": "ASI01-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI02-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI08-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI08-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI08-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI09-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    },
+    {
+     "unit": "ASI10-M1",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "ASI10-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "MCP06-PRE5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP06",
+     "risk": "Intent Flow Subversion"
+    },
+    {
+     "unit": "MCP07-DET2",
+     "source": "owasp-mcp",
+     "risk_id": "MCP07",
+     "risk": "Insufficient Authentication & Authorization"
+    },
+    {
+     "unit": "MCP08-PRE19",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S12": {
+   "name": "Human approval / input request",
+   "layer": "goal",
+   "otel_coverage": "P-b",
+   "units": [
+    {
+     "unit": "ASI01-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI01-M4",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "MCP05-PRE15",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP06-PRE5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP06",
+     "risk": "Intent Flow Subversion"
+    }
+   ]
+  },
+  "S13": {
+   "name": "Policy / guardrail decision",
+   "layer": "goal",
+   "otel_coverage": "P-c",
+   "units": [
+    {
+     "unit": "ASI01-M4",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI01-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI02-M4",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI02-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI08-M10",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI09-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    },
+    {
+     "unit": "ASI09-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    },
+    {
+     "unit": "MCP05-DET7",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP10-PRE18",
+     "source": "owasp-mcp",
+     "risk_id": "MCP10",
+     "risk": "Context Injection & Over-Sharing"
+    }
+   ]
+  },
+  "S14": {
+   "name": "Tool invocation",
+   "layer": "tool",
+   "otel_coverage": "C",
+   "units": [
+    {
+     "unit": "ASI01-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI02-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI08-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI09-M2",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    },
+    {
+     "unit": "ASI09-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    },
+    {
+     "unit": "ASI09-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    },
+    {
+     "unit": "ASI10-M1",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "ASI10-M5",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "MCP02-DET6",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP02-REM7",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP03-PRE15",
+     "source": "owasp-mcp",
+     "risk_id": "MCP03",
+     "risk": "Tool Poisoning"
+    },
+    {
+     "unit": "MCP03-REM4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP03",
+     "risk": "Tool Poisoning"
+    },
+    {
+     "unit": "MCP05-PRE15",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP08-PRE1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP08-PRE4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP08-PRE19",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP09-DET5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    }
+   ]
+  },
+  "S15": {
+   "name": "Tool arguments",
+   "layer": "tool",
+   "otel_coverage": "P-a",
+   "units": [
+    {
+     "unit": "ASI02-M4",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI02-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI08-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "MCP05-PRE15",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP05-DET1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP05-DET7",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP08-PRE1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S16": {
+   "name": "Tool result",
+   "layer": "tool",
+   "otel_coverage": "P-a",
+   "units": [
+    {
+     "unit": "ASI08-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI08-M10",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "MCP08-PRE1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S17": {
+   "name": "Tool/schema version and hash",
+   "layer": "tool",
+   "otel_coverage": "N",
+   "units": [
+    {
+     "unit": "ASI04-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI04",
+     "risk": "Agentic Supply Chain Vulnerabilities"
+    },
+    {
+     "unit": "MCP03-PRE15",
+     "source": "owasp-mcp",
+     "risk_id": "MCP03",
+     "risk": "Tool Poisoning"
+    },
+    {
+     "unit": "MCP03-PRE18",
+     "source": "owasp-mcp",
+     "risk_id": "MCP03",
+     "risk": "Tool Poisoning"
+    },
+    {
+     "unit": "MCP03-REM4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP03",
+     "risk": "Tool Poisoning"
+    },
+    {
+     "unit": "MCP04-DET4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP04",
+     "risk": "Software Supply Chain Attacks & Dependency Tampering"
+    },
+    {
+     "unit": "MCP08-PRE1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP08-PRE20",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S18": {
+   "name": "MCP server identity and endpoint",
+   "layer": "tool",
+   "otel_coverage": "P-b",
+   "units": [
+    {
+     "unit": "MCP09-PRE22",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    },
+    {
+     "unit": "MCP09-PRE23",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    },
+    {
+     "unit": "MCP09-PRE24",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    },
+    {
+     "unit": "MCP09-DET1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    },
+    {
+     "unit": "MCP09-DET2",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    },
+    {
+     "unit": "MCP09-DET4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    },
+    {
+     "unit": "MCP09-DET5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    }
+   ]
+  },
+  "S19": {
+   "name": "Component/dependency integrity",
+   "layer": "supply-chain",
+   "otel_coverage": "P-c",
+   "units": [
+    {
+     "unit": "ASI04-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI04",
+     "risk": "Agentic Supply Chain Vulnerabilities"
+    },
+    {
+     "unit": "MCP04-DET1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP04",
+     "risk": "Software Supply Chain Attacks & Dependency Tampering"
+    },
+    {
+     "unit": "MCP04-DET3",
+     "source": "owasp-mcp",
+     "risk_id": "MCP04",
+     "risk": "Software Supply Chain Attacks & Dependency Tampering"
+    }
+   ]
+  },
+  "S20": {
+   "name": "Configuration change",
+   "layer": "supply-chain",
+   "otel_coverage": "P-b",
+   "units": [
+    {
+     "unit": "ASI01-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "MCP02-DET2",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP02-REM7",
+     "source": "owasp-mcp",
+     "risk_id": "MCP02",
+     "risk": "Privilege Escalation via Scope Creep"
+    },
+    {
+     "unit": "MCP04-DET1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP04",
+     "risk": "Software Supply Chain Attacks & Dependency Tampering"
+    },
+    {
+     "unit": "MCP04-DET3",
+     "source": "owasp-mcp",
+     "risk_id": "MCP04",
+     "risk": "Software Supply Chain Attacks & Dependency Tampering"
+    },
+    {
+     "unit": "MCP04-DET4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP04",
+     "risk": "Software Supply Chain Attacks & Dependency Tampering"
+    },
+    {
+     "unit": "MCP09-PRE24",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    }
+   ]
+  },
+  "S21": {
+   "name": "Input content",
+   "layer": "content",
+   "otel_coverage": "P-a",
+   "units": [
+    {
+     "unit": "ASI01-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI01-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI05-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI05",
+     "risk": "Unexpected Code Execution (RCE)"
+    },
+    {
+     "unit": "ASI09-M2",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    },
+    {
+     "unit": "MCP06-PRE5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP06",
+     "risk": "Intent Flow Subversion"
+    },
+    {
+     "unit": "MCP08-PRE1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP08-PRE19",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S22": {
+   "name": "Output content",
+   "layer": "content",
+   "otel_coverage": "P-a",
+   "units": [
+    {
+     "unit": "ASI05-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI05",
+     "risk": "Unexpected Code Execution (RCE)"
+    },
+    {
+     "unit": "ASI09-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    },
+    {
+     "unit": "MCP08-PRE12",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S23": {
+   "name": "System instructions / prompt version",
+   "layer": "content",
+   "otel_coverage": "P-a",
+   "units": [
+    {
+     "unit": "ASI01-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    }
+   ]
+  },
+  "S24": {
+   "name": "Sensitive-data classification",
+   "layer": "content",
+   "otel_coverage": "N",
+   "units": [
+    {
+     "unit": "ASI01-M9",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI09-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    },
+    {
+     "unit": "MCP01-DET3",
+     "source": "owasp-mcp",
+     "risk_id": "MCP01",
+     "risk": "Token Mismanagement and Secret Exposure"
+    },
+    {
+     "unit": "MCP08-PRE4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S25": {
+   "name": "Memory read/write",
+   "layer": "memory",
+   "otel_coverage": "C",
+   "units": [
+    {
+     "unit": "ASI06-M5",
+     "source": "owasp-asi",
+     "risk_id": "ASI06",
+     "risk": "Memory & Context Poisoning"
+    },
+    {
+     "unit": "MCP01-DET3",
+     "source": "owasp-mcp",
+     "risk_id": "MCP01",
+     "risk": "Token Mismanagement and Secret Exposure"
+    },
+    {
+     "unit": "MCP10-PRE17",
+     "source": "owasp-mcp",
+     "risk_id": "MCP10",
+     "risk": "Context Injection & Over-Sharing"
+    },
+    {
+     "unit": "MCP10-PRE18",
+     "source": "owasp-mcp",
+     "risk_id": "MCP10",
+     "risk": "Context Injection & Over-Sharing"
+    }
+   ]
+  },
+  "S26": {
+   "name": "Content provenance",
+   "layer": "memory",
+   "otel_coverage": "P-b",
+   "units": [
+    {
+     "unit": "ASI06-M5",
+     "source": "owasp-asi",
+     "risk_id": "ASI06",
+     "risk": "Memory & Context Poisoning"
+    },
+    {
+     "unit": "ASI09-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI09",
+     "risk": "Human-Agent Trust Exploitation"
+    }
+   ]
+  },
+  "S27": {
+   "name": "Inter-agent message event",
+   "layer": "inter-agent",
+   "otel_coverage": "C",
+   "units": [
+    {
+     "unit": "ASI04-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI04",
+     "risk": "Agentic Supply Chain Vulnerabilities"
+    },
+    {
+     "unit": "ASI07-M2",
+     "source": "owasp-asi",
+     "risk_id": "ASI07",
+     "risk": "Insecure Inter-Agent Communication"
+    },
+    {
+     "unit": "ASI07-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI07",
+     "risk": "Insecure Inter-Agent Communication"
+    },
+    {
+     "unit": "ASI08-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI08-M10",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI10-M1",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "ASI10-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    }
+   ]
+  },
+  "S28": {
+   "name": "Message integrity / replay check",
+   "layer": "inter-agent",
+   "otel_coverage": "N",
+   "units": [
+    {
+     "unit": "ASI07-M2",
+     "source": "owasp-asi",
+     "risk_id": "ASI07",
+     "risk": "Insecure Inter-Agent Communication"
+    },
+    {
+     "unit": "ASI07-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI07",
+     "risk": "Insecure Inter-Agent Communication"
+    }
+   ]
+  },
+  "S29": {
+   "name": "Agent discovery / registration",
+   "layer": "inter-agent",
+   "otel_coverage": "P-b",
+   "units": [
+    {
+     "unit": "ASI07-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI07",
+     "risk": "Insecure Inter-Agent Communication"
+    }
+   ]
+  },
+  "S30": {
+   "name": "Process / command execution",
+   "layer": "execution",
+   "otel_coverage": "P-b",
+   "units": [
+    {
+     "unit": "ASI05-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI05",
+     "risk": "Unexpected Code Execution (RCE)"
+    },
+    {
+     "unit": "MCP05-DET1",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP05-DET2",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP05-DET5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP08-PRE5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S31": {
+   "name": "File access",
+   "layer": "execution",
+   "otel_coverage": "P-c",
+   "units": [
+    {
+     "unit": "ASI05-M4",
+     "source": "owasp-asi",
+     "risk_id": "ASI05",
+     "risk": "Unexpected Code Execution (RCE)"
+    },
+    {
+     "unit": "MCP05-DET4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    }
+   ]
+  },
+  "S32": {
+   "name": "Network egress",
+   "layer": "execution",
+   "otel_coverage": "C",
+   "units": [
+    {
+     "unit": "ASI02-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI10-M5",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "MCP04-DET2",
+     "source": "owasp-mcp",
+     "risk_id": "MCP04",
+     "risk": "Software Supply Chain Attacks & Dependency Tampering"
+    },
+    {
+     "unit": "MCP05-DET3",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP08-PRE5",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    },
+    {
+     "unit": "MCP09-DET3",
+     "source": "owasp-mcp",
+     "risk_id": "MCP09",
+     "risk": "Shadow MCP Servers"
+    }
+   ]
+  },
+  "S33": {
+   "name": "Downstream data access and volume",
+   "layer": "execution",
+   "otel_coverage": "C",
+   "units": [
+    {
+     "unit": "ASI01-M7",
+     "source": "owasp-asi",
+     "risk_id": "ASI01",
+     "risk": "Agent Goal Hijack"
+    },
+    {
+     "unit": "ASI02-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI10-M5",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "MCP03-REM4",
+     "source": "owasp-mcp",
+     "risk_id": "MCP03",
+     "risk": "Tool Poisoning"
+    },
+    {
+     "unit": "MCP08-PRE12",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  },
+  "S34": {
+   "name": "Resource use and rates",
+   "layer": "execution",
+   "otel_coverage": "C",
+   "units": [
+    {
+     "unit": "ASI02-M4",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI02-M8",
+     "source": "owasp-asi",
+     "risk_id": "ASI02",
+     "risk": "Tool Misuse and Exploitation"
+    },
+    {
+     "unit": "ASI06-M5",
+     "source": "owasp-asi",
+     "risk_id": "ASI06",
+     "risk": "Memory & Context Poisoning"
+    },
+    {
+     "unit": "ASI08-M6",
+     "source": "owasp-asi",
+     "risk_id": "ASI08",
+     "risk": "Cascading Failures"
+    },
+    {
+     "unit": "ASI10-M3",
+     "source": "owasp-asi",
+     "risk_id": "ASI10",
+     "risk": "Rogue Agents"
+    },
+    {
+     "unit": "MCP05-DET6",
+     "source": "owasp-mcp",
+     "risk_id": "MCP05",
+     "risk": "Command Injection & Execution"
+    },
+    {
+     "unit": "MCP08-DET2",
+     "source": "owasp-mcp",
+     "risk_id": "MCP08",
+     "risk": "Lack of Audit and Telemetry"
+    }
+   ]
+  }
+ }
+}

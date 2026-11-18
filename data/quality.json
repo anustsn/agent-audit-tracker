@@ -1,0 +1,25 @@
+{
+  "about": "Evidence quality: the researcher's assessment of how much an auditor could rely on a field or record format, as specified. 'Not established' means the research has not determined it; it does not mean the property is absent.",
+  "dimensions": {
+    "origin": {
+      "applies_to": "field",
+      "values": [
+        "Self-reported",
+        "Recorded by independent component",
+        "Verified by validating party",
+        "Not established"
+      ],
+      "note": "As specified by the document. Actual origin depends on the deployment."
+    },
+    "integrity": {
+      "applies_to": "record format (document)",
+      "values": [
+        "Tamper-evident (specified)",
+        "Not specified (document read)",
+        "Not established"
+      ]
+    }
+  },
+  "default": "Not established",
+  "assessments": {}
+}

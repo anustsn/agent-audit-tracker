@@ -1,0 +1,834 @@
+{
+ "checked_at": "2026-11-18T12:45:07Z",
+ "process_refs": [
+  "rfc2119",
+  "rfc8174",
+  "bcp14"
+ ],
+ "about": "Citations recorded by the IETF Datatracker for each tracked Internet-Draft. 'read' is the revision the matrix was read at, 'current' the latest revision. A normative reference is a citation type; it does not mean that one document implements the other.",
+ "documents": {
+  "ietf-aat": {
+   "error": "",
+   "current": {
+    "doc": "draft-sharif-agent-audit-trail-10",
+    "refs": [
+     {
+      "target": "bcp14",
+      "type": "normative"
+     },
+     {
+      "target": "bcp205",
+      "type": "informative"
+     },
+     {
+      "target": "bcp26",
+      "type": "normative"
+     },
+     {
+      "target": "draft-gilda-wimse-agent-audit-record",
+      "type": "informative"
+     },
+     {
+      "target": "draft-ietf-rats-ar4si",
+      "type": "informative"
+     },
+     {
+      "target": "draft-ietf-rats-ear",
+      "type": "informative"
+     },
+     {
+      "target": "draft-munoz-wimse-authorization-evidence",
+      "type": "informative"
+     },
+     {
+      "target": "draft-sharif-mcps-secure-mcp",
+      "type": "informative"
+     },
+     {
+      "target": "draft-sokolov-rats-aep-composition",
+      "type": "informative"
+     },
+     {
+      "target": "rfc2119",
+      "type": "normative"
+     },
+     {
+      "target": "rfc3161",
+      "type": "normative"
+     },
+     {
+      "target": "rfc3339",
+      "type": "normative"
+     },
+     {
+      "target": "rfc3986",
+      "type": "normative"
+     },
+     {
+      "target": "rfc4180",
+      "type": "informative"
+     },
+     {
+      "target": "rfc4648",
+      "type": "normative"
+     },
+     {
+      "target": "rfc5424",
+      "type": "informative"
+     },
+     {
+      "target": "rfc6962",
+      "type": "normative"
+     },
+     {
+      "target": "rfc7638",
+      "type": "normative"
+     },
+     {
+      "target": "rfc7942",
+      "type": "informative"
+     },
+     {
+      "target": "rfc8032",
+      "type": "informative"
+     },
+     {
+      "target": "rfc8126",
+      "type": "normative"
+     },
+     {
+      "target": "rfc8174",
+      "type": "normative"
+     },
+     {
+      "target": "rfc8785",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9334",
+      "type": "informative"
+     },
+     {
+      "target": "rfc9562",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9943",
+      "type": "informative"
+     },
+     {
+      "target": "std66",
+      "type": "normative"
+     }
+    ]
+   },
+   "read": null
+  },
+  "ietf-aims": {
+   "error": "",
+   "current": {
+    "doc": "draft-ietf-wimse-aims-01",
+    "refs": [
+     {
+      "target": "bcp240",
+      "type": "normative"
+     },
+     {
+      "target": "draft-fletcher-transaction-token-chaining-profile",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-oauth-client-id-metadata-document",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-oauth-identity-assertion-authz-grant",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-oauth-identity-chaining",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-oauth-spiffe-client-auth",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-oauth-transaction-tokens",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-wimse-arch",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-wimse-http-signature",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-wimse-identifier",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-wimse-workload-creds",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-wimse-wpt",
+      "type": "normative"
+     },
+     {
+      "target": "rfc2119",
+      "type": "normative"
+     },
+     {
+      "target": "rfc6749",
+      "type": "normative"
+     },
+     {
+      "target": "rfc7523",
+      "type": "normative"
+     },
+     {
+      "target": "rfc7591",
+      "type": "normative"
+     },
+     {
+      "target": "rfc7662",
+      "type": "normative"
+     },
+     {
+      "target": "rfc8174",
+      "type": "normative"
+     },
+     {
+      "target": "rfc8414",
+      "type": "normative"
+     },
+     {
+      "target": "rfc8693",
+      "type": "normative"
+     },
+     {
+      "target": "rfc8705",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9068",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9421",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9449",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9728",
+      "type": "normative"
+     }
+    ]
+   },
+   "read": null
+  },
+  "ietf-gilda": {
+   "error": "",
+   "current": {
+    "doc": "draft-gilda-audit-agent-audit-record-03",
+    "refs": [
+     {
+      "target": "draft-asor-wimse-agent-delegation-chain",
+      "type": "informative"
+     },
+     {
+      "target": "draft-ehstand-oversight-acts",
+      "type": "informative"
+     },
+     {
+      "target": "draft-ietf-wimse-aims",
+      "type": "normative"
+     },
+     {
+      "target": "draft-ietf-wimse-identifier",
+      "type": "normative"
+     },
+     {
+      "target": "draft-jackson-wimse-evaluation",
+      "type": "informative"
+     },
+     {
+      "target": "draft-konda-agentproto-evaluation-state",
+      "type": "informative"
+     },
+     {
+      "target": "draft-uppalapati-wimse-pq-agent-identity",
+      "type": "informative"
+     },
+     {
+      "target": "rfc2119",
+      "type": "normative"
+     },
+     {
+      "target": "rfc3161",
+      "type": "informative"
+     },
+     {
+      "target": "rfc3339",
+      "type": "normative"
+     },
+     {
+      "target": "rfc4998",
+      "type": "informative"
+     },
+     {
+      "target": "rfc6962",
+      "type": "informative"
+     },
+     {
+      "target": "rfc7493",
+      "type": "normative"
+     },
+     {
+      "target": "rfc7942",
+      "type": "informative"
+     },
+     {
+      "target": "rfc8174",
+      "type": "normative"
+     },
+     {
+      "target": "rfc8785",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9162",
+      "type": "informative"
+     }
+    ]
+   },
+   "read": null
+  },
+  "ietf-munoz": {
+   "error": "",
+   "current": {
+    "doc": "draft-munoz-wimse-authorization-evidence-01",
+    "refs": [
+     {
+      "target": "draft-emirdag-scitt-ai-agent-execution",
+      "type": "informative"
+     },
+     {
+      "target": "draft-ietf-oauth-transaction-tokens",
+      "type": "informative"
+     },
+     {
+      "target": "draft-ietf-wimse-arch",
+      "type": "informative"
+     },
+     {
+      "target": "draft-ietf-wimse-identifier",
+      "type": "informative"
+     },
+     {
+      "target": "draft-klrc-aiagent-auth",
+      "type": "normative"
+     },
+     {
+      "target": "draft-munoz-scitt-permit-profile",
+      "type": "normative"
+     },
+     {
+      "target": "draft-veridom-omp",
+      "type": "informative"
+     },
+     {
+      "target": "rfc2119",
+      "type": "normative"
+     },
+     {
+      "target": "rfc8174",
+      "type": "normative"
+     },
+     {
+      "target": "rfc8693",
+      "type": "informative"
+     },
+     {
+      "target": "rfc9052",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9068",
+      "type": "informative"
+     },
+     {
+      "target": "rfc9421",
+      "type": "normative"
+     }
+    ]
+   },
+   "read": null
+  }
+ },
+ "targets": {
+  "bcp14": {
+   "title": "",
+   "state": "",
+   "std_level": "",
+   "group": "",
+   "rev": ""
+  },
+  "bcp205": {
+   "title": "",
+   "state": "",
+   "std_level": "",
+   "group": "",
+   "rev": ""
+  },
+  "bcp240": {
+   "title": "",
+   "state": "",
+   "std_level": "",
+   "group": "",
+   "rev": ""
+  },
+  "bcp26": {
+   "title": "",
+   "state": "",
+   "std_level": "",
+   "group": "",
+   "rev": ""
+  },
+  "draft-asor-wimse-agent-delegation-chain": {
+   "title": "Verifiable Attenuated Delegation for AI Agent Chains",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "03"
+  },
+  "draft-ehstand-oversight-acts": {
+   "title": "Terminology for Human Oversight Acts in Automated and Agentic Systems",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "00"
+  },
+  "draft-emirdag-scitt-ai-agent-execution": {
+   "title": "AI Agent Execution Profile of SCITT",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "01"
+  },
+  "draft-fletcher-transaction-token-chaining-profile": {
+   "title": "Transaction Token Authorization Grant Profile for OAuth Identity and Authorization Chaining",
+   "state": "Replaced",
+   "std_level": "",
+   "group": "none",
+   "rev": "02",
+   "replaced_by": [
+    "draft-fletcher-oauth-txn-token-chaining-profile"
+   ]
+  },
+  "draft-gilda-wimse-agent-audit-record": {
+   "title": "An Audit Record Format for AI Agent Authorization Decisions",
+   "state": "Replaced",
+   "std_level": "",
+   "group": "none",
+   "rev": "02",
+   "replaced_by": [
+    "draft-gilda-audit-agent-audit-record"
+   ]
+  },
+  "draft-ietf-oauth-client-id-metadata-document": {
+   "title": "OAuth Client ID Metadata Document",
+   "state": "Active",
+   "std_level": "",
+   "group": "oauth",
+   "rev": "03"
+  },
+  "draft-ietf-oauth-identity-assertion-authz-grant": {
+   "title": "Identity Assertion JWT Authorization Grant",
+   "state": "Active",
+   "std_level": "",
+   "group": "oauth",
+   "rev": "06"
+  },
+  "draft-ietf-oauth-identity-chaining": {
+   "title": "OAuth Identity and Authorization Chaining Across Domains",
+   "state": "Active",
+   "std_level": "",
+   "group": "oauth",
+   "rev": "17"
+  },
+  "draft-ietf-oauth-spiffe-client-auth": {
+   "title": "OAuth SPIFFE Client Authentication",
+   "state": "Active",
+   "std_level": "",
+   "group": "oauth",
+   "rev": "03"
+  },
+  "draft-ietf-oauth-transaction-tokens": {
+   "title": "Transaction Tokens",
+   "state": "Active",
+   "std_level": "",
+   "group": "oauth",
+   "rev": "11"
+  },
+  "draft-ietf-rats-ar4si": {
+   "title": "Attestation Results for Secure Interactions",
+   "state": "Active",
+   "std_level": "",
+   "group": "rats",
+   "rev": "11"
+  },
+  "draft-ietf-rats-ear": {
+   "title": "EAT Attestation Results",
+   "state": "Active",
+   "std_level": "",
+   "group": "rats",
+   "rev": "05"
+  },
+  "draft-ietf-wimse-aims": {
+   "title": "AI Identity Management System",
+   "state": "Active",
+   "std_level": "",
+   "group": "wimse",
+   "rev": "01"
+  },
+  "draft-ietf-wimse-arch": {
+   "title": "Workload Identity in a Multi System Environment (WIMSE) Architecture",
+   "state": "Active",
+   "std_level": "",
+   "group": "wimse",
+   "rev": "09"
+  },
+  "draft-ietf-wimse-http-signature": {
+   "title": "WIMSE Workload-to-Workload Authentication with HTTP Signatures",
+   "state": "Active",
+   "std_level": "",
+   "group": "wimse",
+   "rev": "08"
+  },
+  "draft-ietf-wimse-identifier": {
+   "title": "Workload Identifier",
+   "state": "Active",
+   "std_level": "",
+   "group": "wimse",
+   "rev": "04"
+  },
+  "draft-ietf-wimse-workload-creds": {
+   "title": "WIMSE Workload Credentials",
+   "state": "Active",
+   "std_level": "",
+   "group": "wimse",
+   "rev": "03"
+  },
+  "draft-ietf-wimse-wpt": {
+   "title": "WIMSE Workload Proof Token",
+   "state": "Active",
+   "std_level": "",
+   "group": "wimse",
+   "rev": "02"
+  },
+  "draft-jackson-wimse-evaluation": {
+   "title": "Verifier-Side Evaluation Semantics for Delegated Authority Chains",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "05"
+  },
+  "draft-klrc-aiagent-auth": {
+   "title": "AI Agent Authentication and Authorization",
+   "state": "Replaced",
+   "std_level": "",
+   "group": "wimse",
+   "rev": "03",
+   "replaced_by": [
+    "draft-ietf-wimse-aims"
+   ]
+  },
+  "draft-konda-agentproto-evaluation-state": {
+   "title": "Preserving Evaluation State in Agent Protocol Decisions",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "02"
+  },
+  "draft-munoz-scitt-permit-profile": {
+   "title": "A SCITT Profile for Pre-Execution AI Action Authorization Records",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "01"
+  },
+  "draft-munoz-wimse-authorization-evidence": {
+   "title": "Signed Authorization-Evidence Records for WIMSE-Authorized AI Agent Actions",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "01"
+  },
+  "draft-sharif-mcps-secure-mcp": {
+   "title": "MCPS: Cryptographic Security Layer for the Model Context Protocol",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "01"
+  },
+  "draft-sokolov-rats-aep-composition": {
+   "title": "Composing Application-Layer Action Evidence with Remote Attestation Procedures",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "06"
+  },
+  "draft-uppalapati-wimse-pq-agent-identity": {
+   "title": "Post-Quantum Requirements for Software and AI Agent Identity",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "01"
+  },
+  "draft-veridom-omp": {
+   "title": "Operating Model Protocol (OMP) Core -- Version 02: Invariant 3 -- Verifiable Delegation Binding",
+   "state": "Expired",
+   "std_level": "",
+   "group": "none",
+   "rev": "02"
+  },
+  "rfc2119": {
+   "title": "Key words for use in RFCs to Indicate Requirement Levels",
+   "state": "Published",
+   "std_level": "Best Current Practice",
+   "group": "none",
+   "rev": ""
+  },
+  "rfc3161": {
+   "title": "Internet X.509 Public Key Infrastructure Time-Stamp Protocol (TSP)",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "pkix",
+   "rev": ""
+  },
+  "rfc3339": {
+   "title": "Date and Time on the Internet: Timestamps",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "impp",
+   "rev": ""
+  },
+  "rfc3986": {
+   "title": "Uniform Resource Identifier (URI): Generic Syntax",
+   "state": "Published",
+   "std_level": "Internet Standard",
+   "group": "gen",
+   "rev": ""
+  },
+  "rfc4180": {
+   "title": "Common Format and MIME Type for Comma-Separated Values (CSV) Files",
+   "state": "Published",
+   "std_level": "Informational",
+   "group": "app",
+   "rev": ""
+  },
+  "rfc4648": {
+   "title": "The Base16, Base32, and Base64 Data Encodings",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "gen",
+   "rev": ""
+  },
+  "rfc4998": {
+   "title": "Evidence Record Syntax (ERS)",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "ltans",
+   "rev": ""
+  },
+  "rfc5424": {
+   "title": "The Syslog Protocol",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "syslog",
+   "rev": ""
+  },
+  "rfc6749": {
+   "title": "The OAuth 2.0 Authorization Framework",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc6962": {
+   "title": "Certificate Transparency",
+   "state": "Published",
+   "std_level": "Experimental",
+   "group": "none",
+   "rev": ""
+  },
+  "rfc7493": {
+   "title": "The I-JSON Message Format",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "json",
+   "rev": ""
+  },
+  "rfc7523": {
+   "title": "JSON Web Token (JWT) Profile for OAuth 2.0 Client Authentication and Authorization Grants",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc7591": {
+   "title": "OAuth 2.0 Dynamic Client Registration Protocol",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc7638": {
+   "title": "JSON Web Key (JWK) Thumbprint",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "jose",
+   "rev": ""
+  },
+  "rfc7662": {
+   "title": "OAuth 2.0 Token Introspection",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc7942": {
+   "title": "Improving Awareness of Running Code: The Implementation Status Section",
+   "state": "Published",
+   "std_level": "Best Current Practice",
+   "group": "none",
+   "rev": ""
+  },
+  "rfc8032": {
+   "title": "Edwards-Curve Digital Signature Algorithm (EdDSA)",
+   "state": "Published",
+   "std_level": "Informational",
+   "group": "cfrg",
+   "rev": ""
+  },
+  "rfc8126": {
+   "title": "Guidelines for Writing an IANA Considerations Section in RFCs",
+   "state": "Published",
+   "std_level": "Best Current Practice",
+   "group": "none",
+   "rev": ""
+  },
+  "rfc8174": {
+   "title": "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
+   "state": "Published",
+   "std_level": "Best Current Practice",
+   "group": "none",
+   "rev": ""
+  },
+  "rfc8414": {
+   "title": "OAuth 2.0 Authorization Server Metadata",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc8693": {
+   "title": "OAuth 2.0 Token Exchange",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc8705": {
+   "title": "OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc8785": {
+   "title": "JSON Canonicalization Scheme (JCS)",
+   "state": "Published",
+   "std_level": "Informational",
+   "group": "none",
+   "rev": ""
+  },
+  "rfc9052": {
+   "title": "CBOR Object Signing and Encryption (COSE): Structures and Process",
+   "state": "Published",
+   "std_level": "Internet Standard",
+   "group": "cose",
+   "rev": ""
+  },
+  "rfc9068": {
+   "title": "JSON Web Token (JWT) Profile for OAuth 2.0 Access Tokens",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc9162": {
+   "title": "Certificate Transparency Version 2.0",
+   "state": "Published",
+   "std_level": "Experimental",
+   "group": "trans",
+   "rev": ""
+  },
+  "rfc9334": {
+   "title": "Remote ATtestation procedureS (RATS) Architecture",
+   "state": "Published",
+   "std_level": "Informational",
+   "group": "rats",
+   "rev": ""
+  },
+  "rfc9421": {
+   "title": "HTTP Message Signatures",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "httpbis",
+   "rev": ""
+  },
+  "rfc9449": {
+   "title": "OAuth 2.0 Demonstrating Proof of Possession (DPoP)",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc9562": {
+   "title": "Universally Unique IDentifiers (UUIDs)",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "uuidrev",
+   "rev": ""
+  },
+  "rfc9728": {
+   "title": "OAuth 2.0 Protected Resource Metadata",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "oauth",
+   "rev": ""
+  },
+  "rfc9943": {
+   "title": "An Architecture for Trustworthy and Transparent Digital Supply Chains",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "scitt",
+   "rev": ""
+  },
+  "std66": {
+   "title": "",
+   "state": "",
+   "std_level": "",
+   "group": "",
+   "rev": ""
+  }
+ }
+}

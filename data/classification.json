@@ -1,0 +1,270 @@
+{
+  "about": "Researcher classification. Everything in this file is the tracker maintainer's judgement, not something the documents state. Roles may have several values per document. Document types from a registry (IETF Datatracker) are taken from the registry and are not listed here.",
+  "roles": [
+    {
+      "id": "identity",
+      "name": "Identity",
+      "description": "Who the agent or workload is (includes workload identity)."
+    },
+    {
+      "id": "authorization",
+      "name": "Authorization",
+      "description": "What the agent may do and on whose behalf (includes delegation)."
+    },
+    {
+      "id": "telemetry",
+      "name": "Telemetry",
+      "description": "How agent activity is represented as spans, attributes or events."
+    },
+    {
+      "id": "tool-interaction",
+      "name": "Tool interaction",
+      "description": "Protocols through which agents call tools or other agents."
+    },
+    {
+      "id": "provenance",
+      "name": "Provenance",
+      "description": "Where an artefact or record came from and whether it was altered."
+    },
+    {
+      "id": "audit-record",
+      "name": "Audit record",
+      "description": "Formats for records of individual agent actions."
+    },
+    {
+      "id": "audit-control",
+      "name": "Audit control",
+      "description": "Requirements that the evidence has to satisfy (controls, risk lists)."
+    }
+  ],
+  "document_roles": {
+    "otel-genai": [
+      "telemetry"
+    ],
+    "otel-pr-350": [
+      "telemetry",
+      "identity"
+    ],
+    "otel-core-4022": [
+      "telemetry",
+      "identity",
+      "authorization"
+    ],
+    "ietf-aat": [
+      "audit-record"
+    ],
+    "ietf-aims": [
+      "identity",
+      "authorization"
+    ],
+    "ietf-gilda": [
+      "audit-record",
+      "authorization"
+    ],
+    "ietf-munoz": [
+      "authorization",
+      "audit-record"
+    ],
+    "nist-nccoe": [
+      "identity",
+      "authorization"
+    ],
+    "owasp-asi": [
+      "audit-control"
+    ],
+    "owasp-mcp": [
+      "audit-control"
+    ],
+    "iso-27001-a815": [
+      "audit-control"
+    ],
+    "pci-dss-10": [
+      "audit-control"
+    ],
+    "rfc-8693": [
+      "identity",
+      "authorization"
+    ],
+    "rfc-9449": [
+      "identity",
+      "authorization"
+    ],
+    "rfc-9943": [
+      "provenance"
+    ],
+    "mcp-spec": [
+      "tool-interaction"
+    ],
+    "a2a-spec": [
+      "tool-interaction"
+    ],
+    "nist-800-53": [
+      "audit-control"
+    ],
+    "eu-ai-act": [
+      "audit-control"
+    ]
+  },
+  "document_types": {
+    "otel-genai": "Technical specification",
+    "otel-pr-350": "Proposal",
+    "otel-core-4022": "Proposal",
+    "nist-nccoe": "Concept paper",
+    "owasp-asi": "Security framework",
+    "owasp-mcp": "Security framework",
+    "iso-27001-a815": "Published standard",
+    "pci-dss-10": "Published standard",
+    "mcp-spec": "Technical specification",
+    "a2a-spec": "Technical specification",
+    "nist-800-53": "Control catalogue",
+    "eu-ai-act": "Regulation"
+  },
+  "document_type_values": [
+    "RFC",
+    "WG Internet-Draft",
+    "Individual Internet-Draft",
+    "Published standard",
+    "Technical specification",
+    "Security framework",
+    "Concept paper",
+    "Research paper",
+    "Dataset",
+    "Implementation",
+    "Proposal",
+    "Control catalogue",
+    "Regulation"
+  ],
+  "maturity_rule": {
+    "about": "How the raw state reported by each registry is normalised. The raw state is a document fact; this mapping is a researcher rule.",
+    "map": {
+      "Active": "Draft",
+      "Expired": "Expired",
+      "Replaced": "Replaced",
+      "RFC": "Published",
+      "Published": "Published",
+      "open (draft)": "Open proposal",
+      "open": "Open proposal",
+      "merged": "Merged",
+      "closed": "Closed"
+    }
+  },
+  "links": [
+    {
+      "from": "otel-genai",
+      "to": "mcp",
+      "relation": "defines semantic conventions for",
+      "pointer": "docs/gen-ai/mcp.md at e6658f1",
+      "verification": "Pending"
+    },
+    {
+      "from": "otel-genai",
+      "to": "a2a",
+      "relation": "defines semantic conventions for",
+      "pointer": "docs/gen-ai/a2a.md at e6658f1",
+      "verification": "Pending"
+    },
+    {
+      "from": "ietf-gilda",
+      "to": "in-toto",
+      "relation": "uses the envelope format of",
+      "pointer": "draft-gilda-wimse-agent-audit-record-02 (overview read; section not recorded)",
+      "verification": "Pending"
+    }
+  ],
+  "external_nodes": {
+    "mcp": {
+      "name": "Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification",
+      "tracked": false
+    },
+    "a2a": {
+      "name": "Agent2Agent (A2A) protocol",
+      "url": "https://a2a-protocol.org/",
+      "tracked": false
+    },
+    "in-toto": {
+      "name": "in-toto",
+      "url": "https://in-toto.io/",
+      "tracked": false
+    }
+  },
+  "related_research_types": {
+    "0": "Research paper",
+    "1": "Research paper",
+    "2": "Dataset"
+  },
+  "coverage": {
+    "about": "Researcher's statement of scope: which areas of AI agent audit criteria the tracker covers. It describes what is tracked; it does not claim that nothing is missing.",
+    "not_an_audit_tool": "The tracker does not audit agents and holds no organisation's evidence (agent inventories, logs, access records, approvals). It maps the documents an auditor could use as criteria.",
+    "areas": [
+      {
+        "area": "Telemetry schemas",
+        "examples": "OpenTelemetry GenAI semantic conventions, proposals for agent identity and IAM attributes",
+        "status": "tracked",
+        "note": "Status, commits and proposals tracked automatically."
+      },
+      {
+        "area": "Audit record formats",
+        "examples": "IETF Internet-Drafts on agent audit trails and authorisation-decision records",
+        "status": "tracked",
+        "note": "Three individual drafts; status and citations per revision."
+      },
+      {
+        "area": "Agent identity and authorisation",
+        "examples": "WIMSE AIMS, NIST NCCoE project; OAuth token exchange, DPoP, SPIFFE",
+        "status": "partly",
+        "note": "AIMS and NCCoE are tracked. OAuth Token Exchange (RFC 8693) and DPoP (RFC 9449): status only. SPIFFE appears only as citations."
+      },
+      {
+        "area": "Requirement sources and audit controls",
+        "examples": "OWASP agentic and MCP lists; ISO/IEC 27001 A.8.15; PCI DSS Requirement 10; NIST SP 800-53 (AU, IA, AC)",
+        "status": "partly",
+        "note": "Status only for the controls; requirement links exist for the OWASP lists only."
+      },
+      {
+        "area": "Regulation",
+        "examples": "EU AI Act Article 12 (record-keeping) and Article 26(6) (deployers keeping logs)",
+        "status": "status only",
+        "note": "Checked by hand. Amendments are not tracked."
+      },
+      {
+        "area": "AI management and risk frameworks",
+        "examples": "ISO/IEC 42001, NIST AI RMF and its Generative AI Profile (NIST AI 600-1)",
+        "status": "out of scope",
+        "note": "Organisation-level management and risk requirements, not evidence for individual agent actions."
+      },
+      {
+        "area": "Security control catalogues",
+        "examples": "NIST SP 800-53 Rev. 5 families AU, IA and AC",
+        "status": "status only",
+        "note": "NIST SP 800-53 Rev. 5, through NIST's OSCAL content. Listed under audit controls above."
+      },
+      {
+        "area": "Agent protocols",
+        "examples": "Model Context Protocol, Agent2Agent",
+        "status": "status only",
+        "note": "MCP and A2A specifications: latest change only."
+      },
+      {
+        "area": "Provenance and supply chain",
+        "examples": "in-toto, SLSA, Sigstore, IETF SCITT",
+        "status": "partly",
+        "note": "SCITT architecture (RFC 9943): status only. in-toto, SLSA and Sigstore are not tracked."
+      },
+      {
+        "area": "Audit practice guidance",
+        "examples": "Guidance on auditing AI systems from audit and payment-security bodies",
+        "status": "not tracked",
+        "note": ""
+      },
+      {
+        "area": "Organisation evidence",
+        "examples": "Agent inventories, logs, access records, human approvals",
+        "status": "out of scope",
+        "note": "By design: the tracker covers criteria, not evidence."
+      }
+    ],
+    "question_scope": "The researcher's evidence questions (not yet published) focus on identity, authorisation and record integrity. Basic log elements such as time, origin of the event and the affected resource, and the model version, are not among them yet.",
+    "scope_frozen": "The set of tracked areas is fixed for now. New documents are added only within these areas; status-only tracking is preferred to rating."
+  }
+}

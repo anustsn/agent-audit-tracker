@@ -1,0 +1,1029 @@
+{
+  "checked_at": "2026-11-18T12:45:07Z",
+  "sources": {
+    "otel-genai": {
+      "version": "d28355d",
+      "sha": "d28355d",
+      "state": "latest commit",
+      "updated": "2026-11-18",
+      "message": "reference: update conformance runner pin (#702)",
+      "source": "GitHub REST API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "otel-pr-350": {
+      "version": "open (draft)",
+      "state": "open (draft)",
+      "updated": "2026-10-26",
+      "updated_full": "2026-10-26T19:52:07Z",
+      "title": "Add gen_ai.agent.identity.id and gen_ai.agent.identity.name: agent identity distinct from the deployed resource",
+      "source": "GitHub REST API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "otel-core-4022": {
+      "version": "open",
+      "state": "open",
+      "labels": [
+        "triage:needs-triage"
+      ],
+      "comments": 7,
+      "updated": "2026-10-08",
+      "title": "Semantic conventions for IAM",
+      "source": "GitHub REST API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "ietf-aat": {
+      "version": "-10",
+      "rev": "10",
+      "updated": "2026-11-17",
+      "expires": "2027-05-21",
+      "state": "Active",
+      "group": "none",
+      "group_type": "Individual",
+      "title": "Agent Audit Trail: A Standard Logging Format for Autonomous AI Systems",
+      "doc_type": "Individual Internet-Draft",
+      "doc_type_source": "IETF Datatracker (group type)",
+      "source": "IETF Datatracker API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "ietf-aims": {
+      "version": "-01",
+      "rev": "01",
+      "updated": "2026-11-02",
+      "expires": "2027-05-06",
+      "state": "Active",
+      "group": "wimse",
+      "group_type": "WG",
+      "title": "AI Identity Management System",
+      "doc_type": "WG Internet-Draft",
+      "doc_type_source": "IETF Datatracker (group type)",
+      "source": "IETF Datatracker API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "ietf-gilda": {
+      "version": "-03",
+      "rev": "03",
+      "updated": "2026-10-29",
+      "expires": "2027-05-02",
+      "state": "Active",
+      "group": "none",
+      "group_type": "Individual",
+      "title": "An Audit Record Format for AI Agent Authorization Decisions",
+      "doc_type": "Individual Internet-Draft",
+      "doc_type_source": "IETF Datatracker (group type)",
+      "source": "IETF Datatracker API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "ietf-munoz": {
+      "version": "-01",
+      "rev": "01",
+      "updated": "2026-07-19",
+      "expires": "2027-01-20",
+      "state": "Active",
+      "group": "none",
+      "group_type": "Individual",
+      "title": "Signed Authorization-Evidence Records for WIMSE-Authorized AI Agent Actions",
+      "doc_type": "Individual Internet-Draft",
+      "doc_type_source": "IETF Datatracker (group type)",
+      "source": "IETF Datatracker API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "nist-nccoe": {
+      "version": "7871b1f",
+      "sha": "7871b1f",
+      "state": "latest commit",
+      "updated": "2026-10-29",
+      "message": "adds second blog post",
+      "source": "GitHub REST API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "owasp-asi": {
+      "version": "PDF released 9 Dec 2025",
+      "state": "checked by hand",
+      "updated": "2026-11-13",
+      "source": "checked by hand",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "owasp-mcp": {
+      "version": "165fe0f",
+      "sha": "165fe0f",
+      "state": "latest commit",
+      "updated": "2026-07-29",
+      "message": "Merge pull request #38 from EricFinland/mcp03-static-detection-indicators",
+      "source": "GitHub REST API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "iso-27001-a815": {
+      "version": "2022",
+      "state": "checked by hand",
+      "updated": "2026-11-16",
+      "source": "checked by hand",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "pci-dss-10": {
+      "version": "v4.0.1",
+      "state": "checked by hand",
+      "updated": "2026-11-16",
+      "source": "checked by hand",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "rfc-8693": {
+      "version": "RFC 8693",
+      "state": "Published",
+      "std_level": "Proposed Standard",
+      "published": "January 2020",
+      "updated": "",
+      "obsoleted_by": [],
+      "updated_by": [],
+      "title": "OAuth 2.0 Token Exchange",
+      "doc_type": "RFC (Proposed Standard)",
+      "doc_type_source": "RFC Editor",
+      "source": "RFC Editor",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "rfc-9449": {
+      "version": "RFC 9449",
+      "state": "Published",
+      "std_level": "Proposed Standard",
+      "published": "September 2023",
+      "updated": "",
+      "obsoleted_by": [],
+      "updated_by": [],
+      "title": "OAuth 2.0 Demonstrating Proof of Possession (DPoP)",
+      "doc_type": "RFC (Proposed Standard)",
+      "doc_type_source": "RFC Editor",
+      "source": "RFC Editor",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "rfc-9943": {
+      "version": "RFC 9943",
+      "state": "Published",
+      "std_level": "Proposed Standard",
+      "published": "June 2026",
+      "updated": "",
+      "obsoleted_by": [],
+      "updated_by": [],
+      "title": "An Architecture for Trustworthy and Transparent Digital Supply Chains",
+      "doc_type": "RFC (Proposed Standard)",
+      "doc_type_source": "RFC Editor",
+      "source": "RFC Editor",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "mcp-spec": {
+      "version": "d4b3172",
+      "sha": "d4b3172",
+      "state": "latest commit",
+      "updated": "2026-11-17",
+      "message": "docs: align the extensions overview with SEP-3392 (#3565)",
+      "source": "GitHub REST API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "a2a-spec": {
+      "version": "cfc9d34",
+      "sha": "cfc9d34",
+      "state": "latest commit",
+      "updated": "2026-07-21",
+      "message": "fix(proto): correct gRPC URL example in AgentInterface (#1997)",
+      "source": "GitHub REST API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "nist-800-53": {
+      "version": "f0de6d8",
+      "sha": "f0de6d8",
+      "state": "latest commit",
+      "updated": "2026-10-22",
+      "message": "Publishing auto-converted artifacts [skip ci]",
+      "source": "GitHub REST API",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    },
+    "eu-ai-act": {
+      "version": "Regulation (EU) 2024/1689, OJ 12 July 2024",
+      "state": "checked by hand",
+      "updated": "2026-11-18",
+      "source": "checked by hand",
+      "checked_at": "2026-11-18T12:45:07Z",
+      "error": ""
+    }
+  },
+  "reviews": {
+    "otel-genai": {
+      "state": "unread",
+      "from": "",
+      "to": ""
+    },
+    "otel-pr-350": {
+      "state": "unread",
+      "from": "",
+      "to": ""
+    },
+    "ietf-aat": {
+      "state": "unread",
+      "from": "",
+      "to": ""
+    },
+    "ietf-aims": {
+      "state": "unread",
+      "from": "",
+      "to": ""
+    },
+    "ietf-gilda": {
+      "state": "unread",
+      "from": "",
+      "to": ""
+    },
+    "ietf-munoz": {
+      "state": "unread",
+      "from": "",
+      "to": ""
+    }
+  },
+  "discovered": [
+    {
+      "name": "draft-anandakrishnan-rats-ptv-agent-identity",
+      "title": "The Prove-Transform-Verify (PTV) Protocol for Attested Agent Identity",
+      "version": "-01",
+      "updated": "2026-09-29",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-anandakrishnan-rats-ptv-agent-identity/"
+    },
+    {
+      "name": "draft-asor-wimse-agent-delegation-chain",
+      "title": "Verifiable Attenuated Delegation for AI Agent Chains",
+      "version": "-03",
+      "updated": "2026-10-28",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record",
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-asor-wimse-agent-delegation-chain/"
+    },
+    {
+      "name": "draft-baek-audit-absence-claims",
+      "title": "Interval Absence Claims in Agent Auditing: Problem Statement, Requirements, and Test Scenarios",
+      "version": "-00",
+      "updated": "2026-10-31",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-baek-audit-absence-claims/"
+    },
+    {
+      "name": "draft-chueayen-attestation-receipts",
+      "title": "Enforcement Attestation Receipts for AI Inference and Agent Action Decisions",
+      "version": "-05",
+      "updated": "2026-10-25",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims",
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-chueayen-attestation-receipts/"
+    },
+    {
+      "name": "draft-das-agent-credential-privacy",
+      "title": "Secure AI Execution-Finality for iOS, Android, and Cross-Platform AI Agents, Part 9: Credential Custody, Operation-Bound Secret Use, and Protected Data Disclosure",
+      "version": "-00",
+      "updated": "2026-10-27",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-das-agent-credential-privacy/"
+    },
+    {
+      "name": "draft-das-third-party-decision-binding",
+      "title": "Trust Me, I Checked: Verifiable Third-Party Decision Binding at the Execution-Finality Boundary",
+      "version": "-00",
+      "updated": "2026-09-29",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-munoz-wimse-authorization-evidence"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-das-third-party-decision-binding/"
+    },
+    {
+      "name": "draft-ehstand-oversight-acts",
+      "title": "Terminology for Human Oversight Acts in Automated and Agentic Systems",
+      "version": "-00",
+      "updated": "2026-09-27",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-ehstand-oversight-acts/"
+    },
+    {
+      "name": "draft-emirdag-scitt-ai-agent-execution",
+      "title": "AI Agent Execution Profile of SCITT",
+      "version": "-01",
+      "updated": "2026-10-12",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-munoz-wimse-authorization-evidence"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-emirdag-scitt-ai-agent-execution/"
+    },
+    {
+      "name": "draft-ganesan-agent-authenticator",
+      "title": "Agent Authenticator: Hardware-Bound, Origin-Bound Authentication for AI Agents",
+      "version": "-00",
+      "updated": "2026-11-15",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-ganesan-agent-authenticator/"
+    },
+    {
+      "name": "draft-gilda-audit-restoration-evidence",
+      "title": "Restoration Evidence Records for AI Agent Incident Response",
+      "version": "-00",
+      "updated": "2026-11-02",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record",
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-gilda-audit-restoration-evidence/"
+    },
+    {
+      "name": "draft-gruszka-audit-decision-receipts",
+      "title": "Decision Receipts for Approvals, Declined Actions and Executed Actions in Agent Audit Records",
+      "version": "-10",
+      "updated": "2026-11-17",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-gruszka-audit-decision-receipts/"
+    },
+    {
+      "name": "draft-heigh-wimse-workload-identity-metadata",
+      "title": "Workload Identity Metadata",
+      "version": "-00",
+      "updated": "2026-10-16",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-heigh-wimse-workload-identity-metadata/"
+    },
+    {
+      "name": "draft-hulea-wimse-agent-mandate",
+      "title": "Verifiable Mandates for Agents Acting Across Administrative Domains",
+      "version": "-01",
+      "updated": "2026-11-01",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-hulea-wimse-agent-mandate/"
+    },
+    {
+      "name": "draft-izmaylov-agent-permission-receipts",
+      "title": "Signed Permissions and Action Receipts for Automated Agents",
+      "version": "-02",
+      "updated": "2026-11-02",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record",
+        "draft-ietf-wimse-aims",
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-izmaylov-agent-permission-receipts/"
+    },
+    {
+      "name": "draft-konda-agentproto-evaluation-state",
+      "title": "Preserving Evaluation State in Agent Protocol Decisions",
+      "version": "-02",
+      "updated": "2026-10-20",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-konda-agentproto-evaluation-state/"
+    },
+    {
+      "name": "draft-lemonnier-scitt-decision-provenance",
+      "title": "Decision Provenance for SCITT: binding software releases and agent actions to the decisions behind them",
+      "version": "-03",
+      "updated": "2026-11-17",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record",
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-lemonnier-scitt-decision-provenance/"
+    },
+    {
+      "name": "draft-levi-agent-certification",
+      "title": "Autonomous Agent Certification Protocol (AACP)",
+      "version": "-00",
+      "updated": "2026-10-04",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-levi-agent-certification/"
+    },
+    {
+      "name": "draft-luna-eagf-agent-delegation-semantics",
+      "title": "Semantic Governance Requirements for AI Agent Delegation and Handoff",
+      "version": "-02",
+      "updated": "2026-11-17",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record",
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-luna-eagf-agent-delegation-semantics/"
+    },
+    {
+      "name": "draft-manyfolks-agentproto-arch",
+      "title": "Architecture for AI Agent Communications on the Internet",
+      "version": "-00",
+      "updated": "2026-10-30",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-manyfolks-agentproto-arch/"
+    },
+    {
+      "name": "draft-martinez-itp-agent-mandates",
+      "title": "Invoice Trust Protocol (ITP): Agent Mandates",
+      "version": "-00",
+      "updated": "2026-10-29",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-martinez-itp-agent-mandates/"
+    },
+    {
+      "name": "draft-mih-sato-agent-accountability-composition",
+      "title": "Agent Accountability: Composition and Conformance",
+      "version": "-02",
+      "updated": "2026-11-02",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-mih-sato-agent-accountability-composition/"
+    },
+    {
+      "name": "draft-milan-agent-decision-commitment",
+      "title": "Agent Decision Commitments for Payments",
+      "version": "-00",
+      "updated": "2026-10-15",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-milan-agent-decision-commitment/"
+    },
+    {
+      "name": "draft-nandakumar-agent-sd-card",
+      "title": "Agent SD-Card: Selective Disclosure of Agent Metadata for Discovery and Authentication",
+      "version": "-00",
+      "updated": "2026-11-01",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-nandakumar-agent-sd-card/"
+    },
+    {
+      "name": "draft-nandakumar-agentproto-pace-authz",
+      "title": "PACE Authorization: Delegation and Action Approval",
+      "version": "-00",
+      "updated": "2026-11-16",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-nandakumar-agentproto-pace-authz/"
+    },
+    {
+      "name": "draft-nassar-agentproto-trail",
+      "title": "TRAIL: Tamper-evident Records for Agent Interactions and Liveness",
+      "version": "-00",
+      "updated": "2026-11-02",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims",
+        "draft-munoz-wimse-authorization-evidence"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-nassar-agentproto-trail/"
+    },
+    {
+      "name": "draft-niyikiza-oauth-attenuating-agent-tokens",
+      "title": "Attenuating Authorization Tokens for Agentic Delegation Chains",
+      "version": "-02",
+      "updated": "2026-10-27",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-niyikiza-oauth-attenuating-agent-tokens/"
+    },
+    {
+      "name": "draft-pandey-agent-identity",
+      "title": "Session-Scoped Authorization for AI Agents: A Per-Tool-Call Authorization Profile Building on WIMSE and OAuth",
+      "version": "-00",
+      "updated": "2026-11-17",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-18",
+      "url": "https://datatracker.ietf.org/doc/draft-pandey-agent-identity/"
+    },
+    {
+      "name": "draft-petrie-vcon-agent-audit-roadmap",
+      "title": "vCon for AI Agent Conversations: Requirements, Gaps and Extension Roadmap",
+      "version": "-00",
+      "updated": "2026-11-02",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-petrie-vcon-agent-audit-roadmap/"
+    },
+    {
+      "name": "draft-piehl-agent-rule-provenance",
+      "title": "Rule Provenance for Autonomous AI Agent Audit Records",
+      "version": "-00",
+      "updated": "2026-10-11",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-piehl-agent-rule-provenance/"
+    },
+    {
+      "name": "draft-sahu-agent-action-receipts",
+      "title": "Signed, Hash-Chained Action Receipts for AI Agents",
+      "version": "-00",
+      "updated": "2026-08-16",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-sahu-agent-action-receipts/"
+    },
+    {
+      "name": "draft-sansone-axes-evidence-envelope",
+      "title": "AXES: A Recomputable Evidence Envelope for Autonomous Execution",
+      "version": "-00",
+      "updated": "2026-11-04",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-sansone-axes-evidence-envelope/"
+    },
+    {
+      "name": "draft-sarischo-6gip-aiagent-requirements",
+      "title": "AI Agents 6G System and RAN Requirements and Implementation Approaches",
+      "version": "-01",
+      "updated": "2026-10-11",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-sarischo-6gip-aiagent-requirements/"
+    },
+    {
+      "name": "draft-schrock-action-evidence-boundary",
+      "title": "The Action Evidence Boundary for Consequential Agent Effects",
+      "version": "-07",
+      "updated": "2026-09-26",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims",
+        "draft-munoz-wimse-authorization-evidence"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-schrock-action-evidence-boundary/"
+    },
+    {
+      "name": "draft-shankarlingam-oauth-agent-dns-link",
+      "title": "Linking an Agent's DNS Name to its OAuth Client",
+      "version": "-02",
+      "updated": "2026-11-16",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-shankarlingam-oauth-agent-dns-link/"
+    },
+    {
+      "name": "draft-sharif-agent-trust-enforcement",
+      "title": "Agent Trust Enforcement for Autonomous AI Systems",
+      "version": "-00",
+      "updated": "2026-08-27",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-sharif-agent-trust-enforcement/"
+    },
+    {
+      "name": "draft-sharif-attp-agent-trust-transport",
+      "title": "ATTP: Agent Trust Transport Protocol for Secure Agent-to-Server Communication",
+      "version": "-01",
+      "updated": "2026-08-27",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-sharif-attp-agent-trust-transport/"
+    },
+    {
+      "name": "draft-sharif-typed-evidence-record",
+      "title": "The Typed-Evidence Record: A Legally-Operative, Trust-Graded Record Format for Machine-Generated Evidence",
+      "version": "-00",
+      "updated": "2026-10-03",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-sharif-typed-evidence-record/"
+    },
+    {
+      "name": "draft-sirkkavaara-vaara-receipt",
+      "title": "The Vaara Receipt: A Recomputable Receipt Format for Decisions About Autonomous Actions",
+      "version": "-15",
+      "updated": "2026-11-02",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-sirkkavaara-vaara-receipt/"
+    },
+    {
+      "name": "draft-sparysh-pala-audit",
+      "title": "PALA-1: A Tamper-Evident Audit Record Format for Constrained and Disconnected Deployments",
+      "version": "-02",
+      "updated": "2026-10-22",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-sparysh-pala-audit/"
+    },
+    {
+      "name": "draft-thaha-scitt-agent-execution-evidence",
+      "title": "Agent Execution Evidence: A SCITT Profile for Verifiable Records of AI Agent Runs",
+      "version": "-02",
+      "updated": "2026-11-01",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record",
+        "draft-ietf-wimse-aims",
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-thaha-scitt-agent-execution-evidence/"
+    },
+    {
+      "name": "draft-thaha-wimse-agent-evidence-binding",
+      "title": "Evidence Binding for AI Agent Credentials",
+      "version": "-03",
+      "updated": "2026-11-02",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record",
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-thaha-wimse-agent-evidence-binding/"
+    },
+    {
+      "name": "draft-uppalapati-wimse-pq-agent-identity",
+      "title": "Post-Quantum Requirements for Software and AI Agent Identity",
+      "version": "-01",
+      "updated": "2026-10-28",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record",
+        "draft-ietf-wimse-aims",
+        "draft-munoz-wimse-authorization-evidence",
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-uppalapati-wimse-pq-agent-identity/"
+    },
+    {
+      "name": "draft-watts-authorization-noncollapse-semantics",
+      "title": "Non-Collapse Semantics for Authorization, Evidence, and Execution State",
+      "version": "-02",
+      "updated": "2026-11-16",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-watts-authorization-noncollapse-semantics/"
+    },
+    {
+      "name": "draft-watts-high-assurance-agent-control-envelope",
+      "title": "High-Assurance Agent Control Envelope",
+      "version": "-02",
+      "updated": "2026-11-16",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-munoz-wimse-authorization-evidence"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-watts-high-assurance-agent-control-envelope/"
+    },
+    {
+      "name": "draft-watts-oauth-agent-revocation-closure",
+      "title": "Revocation Closure and Authority Epochs for Agent Delegation",
+      "version": "-04",
+      "updated": "2026-11-16",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-watts-oauth-agent-revocation-closure/"
+    },
+    {
+      "name": "draft-watts-rats-attested-fence-receipt",
+      "title": "Attested Fence Receipts: Hardware-Rooted Evidence of Authority-Epoch Enforcement at Consequential Sinks",
+      "version": "-00",
+      "updated": "2026-11-16",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-watts-rats-attested-fence-receipt/"
+    },
+    {
+      "name": "draft-zhang-audit-record-limits",
+      "title": "What an Agent Audit Record Can and Cannot Establish",
+      "version": "-00",
+      "updated": "2026-10-27",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-gilda-audit-agent-audit-record",
+        "draft-sharif-agent-audit-trail"
+      ],
+      "first_seen": "2026-11-17",
+      "url": "https://datatracker.ietf.org/doc/draft-zhang-audit-record-limits/"
+    }
+  ],
+  "discovery_errors": [],
+  "texts": {
+    "otel-genai": {
+      "error": "",
+      "current": {
+        "short": "d28355d",
+        "sha": "d28355d28cbe9ff158ecf22d85f9e078e43f7b20",
+        "url": "https://github.com/open-telemetry/semantic-conventions-genai/tree/d28355d28cbe9ff158ecf22d85f9e078e43f7b20",
+        "date": "2026-11-18T03:11:38Z"
+      }
+    },
+    "otel-pr-350": {
+      "error": "",
+      "current": {
+        "head_sha": "ce7dd36ed38b5822de5e615401b5ae4b05a3f888",
+        "url": "https://github.com/open-telemetry/semantic-conventions-genai/pull/350",
+        "updated": "2026-10-26T19:52:07Z"
+      }
+    },
+    "otel-core-4022": {
+      "error": "",
+      "current": {
+        "url": "https://github.com/open-telemetry/semantic-conventions/issues/4022",
+        "updated": "2026-10-08"
+      }
+    },
+    "ietf-aat": {
+      "error": "",
+      "current": {
+        "doc": "draft-sharif-agent-audit-trail-10",
+        "url": "https://www.ietf.org/archive/id/draft-sharif-agent-audit-trail-10.txt",
+        "sha256": "f7e67601b29ffd42194e0aa4b955e09b1255df5010238d32ac03a25cda67e7d1",
+        "bytes": 152956,
+        "fetched_at": "2026-11-18T11:35:13Z"
+      }
+    },
+    "ietf-aims": {
+      "error": "",
+      "current": {
+        "doc": "draft-ietf-wimse-aims-01",
+        "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-aims-01.txt",
+        "sha256": "e841af4c870fc83770e65d9c2c3affe3f879099f5135f13fbc13bb0b750578b7",
+        "bytes": 79706,
+        "fetched_at": "2026-11-18T11:35:13Z"
+      }
+    },
+    "ietf-gilda": {
+      "error": "",
+      "current": {
+        "doc": "draft-gilda-audit-agent-audit-record-03",
+        "url": "https://www.ietf.org/archive/id/draft-gilda-audit-agent-audit-record-03.txt",
+        "sha256": "c5d0b74686b62b5d1fd954b2dae0cf02b402c87a06efa6fc82abf8fa847ed786",
+        "bytes": 198134,
+        "fetched_at": "2026-11-18T11:35:13Z"
+      }
+    },
+    "ietf-munoz": {
+      "error": "",
+      "current": {
+        "doc": "draft-munoz-wimse-authorization-evidence-01",
+        "url": "https://www.ietf.org/archive/id/draft-munoz-wimse-authorization-evidence-01.txt",
+        "sha256": "cadcd00f9bec8104def24ef3372d0fe83845db48d208f052bf86168a7be960f6",
+        "bytes": 43571,
+        "fetched_at": "2026-11-18T11:35:13Z"
+      }
+    },
+    "nist-nccoe": {
+      "error": "",
+      "current": {
+        "short": "7871b1f",
+        "sha": "7871b1f285835e1e022489ceb2e73b3ac0f36f47",
+        "url": "https://github.com/usnistgov/nccoe-ai-identity/tree/7871b1f285835e1e022489ceb2e73b3ac0f36f47",
+        "date": "2026-10-29T19:24:59Z"
+      }
+    },
+    "owasp-mcp": {
+      "error": "",
+      "current": {
+        "short": "165fe0f",
+        "sha": "165fe0f78ef104459237b4a8e0f6e78db9b02391",
+        "url": "https://github.com/OWASP/www-project-mcp-top-10/tree/165fe0f78ef104459237b4a8e0f6e78db9b02391",
+        "date": "2026-07-29T14:00:25Z"
+      }
+    },
+    "rfc-8693": {
+      "error": "",
+      "current": {
+        "doc": "rfc8693",
+        "url": "https://www.rfc-editor.org/rfc/rfc8693.txt",
+        "sha256": "358d658014738bf4dc56c8aae2094ce716ede23b6d5a80488a7dc8e8d72da609",
+        "bytes": 63031,
+        "fetched_at": "2026-11-18T12:27:11Z"
+      }
+    },
+    "rfc-9449": {
+      "error": "",
+      "current": {
+        "doc": "rfc9449",
+        "url": "https://www.rfc-editor.org/rfc/rfc9449.txt",
+        "sha256": "3842c58e1f6043389416023b9bb8d765048266024982fbbd90640e05943f4e13",
+        "bytes": 92478,
+        "fetched_at": "2026-11-18T12:27:11Z"
+      }
+    },
+    "rfc-9943": {
+      "error": "",
+      "current": {
+        "doc": "rfc9943",
+        "url": "https://www.rfc-editor.org/rfc/rfc9943.txt",
+        "sha256": "204aea020731e1306e8ffe0aaae5c9559a7a8edf24bd089ae79d6a6d6c7676f1",
+        "bytes": 76117,
+        "fetched_at": "2026-11-18T12:27:12Z"
+      }
+    },
+    "mcp-spec": {
+      "error": "",
+      "current": {
+        "short": "d4b3172",
+        "sha": "d4b317231161ee96d3eefb2448bda4230c76f4c6",
+        "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/tree/d4b317231161ee96d3eefb2448bda4230c76f4c6",
+        "date": "2026-11-17T17:06:53Z"
+      }
+    },
+    "a2a-spec": {
+      "error": "",
+      "current": {
+        "short": "cfc9d34",
+        "sha": "cfc9d34bc41e368827eb6446d31f912e44f795c5",
+        "url": "https://github.com/a2aproject/A2A/tree/cfc9d34bc41e368827eb6446d31f912e44f795c5",
+        "date": "2026-07-21T16:48:19Z"
+      }
+    },
+    "nist-800-53": {
+      "error": "",
+      "current": {
+        "short": "f0de6d8",
+        "sha": "f0de6d8d8c059d374f15e0ae07508d82e370fc1d",
+        "url": "https://github.com/usnistgov/oscal-content/tree/f0de6d8d8c059d374f15e0ae07508d82e370fc1d",
+        "date": "2026-10-22T21:56:10Z"
+      }
+    }
+  },
+  "ratings_snapshot": {}
+}

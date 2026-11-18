@@ -1,0 +1,4 @@
+{
+  "about": "Researcher observations: dated notes by the researcher (researcher classification layer). Each note records the figures it was based on in 'based_on', using the metric names explicit_current, explicit_any, unreviewed_cells, stale_cells and replaced_refs; the page marks a note when those figures have changed since. Example: {\"date\": \"2026-11-25\", \"by\": \"AE\", \"text\": \"...\", \"based_on\": {\"explicit_current\": 2}}",
+  "notes": []
+}

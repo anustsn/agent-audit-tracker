@@ -1,0 +1,74 @@
+name: Update status and publish
+
+# Job 1 refreshes the document facts (status, references, revision checks, text hashes, related drafts),
+# logs any change to the researcher's ratings, commits the result and packages the site.
+# Job 2 publishes the package to GitHub Pages.
+# Pages source must be set to "GitHub Actions" (Settings > Pages): commits made with GITHUB_TOKEN
+# do not start a Pages build on their own, so this workflow deploys itself.
+# Actions are pinned to full commit SHAs (the tag is noted beside each) so a moved tag cannot change what runs.
+
+on:
+  workflow_dispatch:       # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]       # any change you commit; the workflow's own commit does not re-trigger it
+
+permissions: {}            # nothing by default; each job asks only for what it needs
+
+concurrency:
+  group: update-and-publish
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write      # commit refreshed data
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+
+      - name: Refresh document facts and rebuild bundle
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # sent only to api.github.com, never forwarded on redirects
+        run: python3 -I scripts/update_status.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/status.json data/references.json data/changes.json data/ratings_log.json data/bundle.js
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update status $(date -u +%F)"
+            # If someone pushed to main while this ran, rebase onto it and retry (generated files only change here).
+            for attempt in 1 2 3; do
+              if git push; then break; fi
+              if [ "$attempt" = 3 ]; then echo "::error::Could not push the refreshed data"; exit 1; fi
+              git pull --rebase origin main
+            done
+          fi
+
+      - name: Collect site files
+        run: |
+          mkdir _site
+          cp -r index.html assets data LICENSE LICENSE-DATA.md CITATION.cff _site/
+
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa  # v3.0.1
+        with:
+          path: _site
+
+  publish:
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write         # publish to GitHub Pages
+      id-token: write      # required by deploy-pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b  # v5.0.0
+
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5.0.1
