@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-18T13:07:28Z",
+  "checked_at": "2026-11-18T14:13:27Z",
   "sources": {
     "otel-genai": {
       "version": "d28355d",
@@ -8,7 +8,7 @@
       "updated": "2026-11-18",
       "message": "reference: update conformance runner pin (#702)",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "otel-pr-350": {
@@ -18,7 +18,7 @@
       "updated_full": "2026-10-26T19:52:07Z",
       "title": "Add gen_ai.agent.identity.id and gen_ai.agent.identity.name: agent identity distinct from the deployed resource",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "otel-core-4022": {
@@ -31,7 +31,7 @@
       "updated": "2026-10-08",
       "title": "Semantic conventions for IAM",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "ietf-aat": {
@@ -46,7 +46,7 @@
       "doc_type": "Individual Internet-Draft",
       "doc_type_source": "IETF Datatracker (group type)",
       "source": "IETF Datatracker API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "ietf-aims": {
@@ -61,7 +61,7 @@
       "doc_type": "WG Internet-Draft",
       "doc_type_source": "IETF Datatracker (group type)",
       "source": "IETF Datatracker API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "ietf-gilda": {
@@ -76,7 +76,7 @@
       "doc_type": "Individual Internet-Draft",
       "doc_type_source": "IETF Datatracker (group type)",
       "source": "IETF Datatracker API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "ietf-munoz": {
@@ -91,7 +91,7 @@
       "doc_type": "Individual Internet-Draft",
       "doc_type_source": "IETF Datatracker (group type)",
       "source": "IETF Datatracker API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "nist-nccoe": {
@@ -101,7 +101,7 @@
       "updated": "2026-10-29",
       "message": "adds second blog post",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "owasp-asi": {
@@ -109,7 +109,7 @@
       "state": "checked by hand",
       "updated": "2026-11-13",
       "source": "checked by hand",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "owasp-mcp": {
@@ -119,7 +119,7 @@
       "updated": "2026-07-29",
       "message": "Merge pull request #38 from EricFinland/mcp03-static-detection-indicators",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "iso-27001-a815": {
@@ -127,7 +127,7 @@
       "state": "checked by hand",
       "updated": "2026-11-16",
       "source": "checked by hand",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "pci-dss-10": {
@@ -135,7 +135,7 @@
       "state": "checked by hand",
       "updated": "2026-11-16",
       "source": "checked by hand",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "rfc-8693": {
@@ -150,7 +150,7 @@
       "doc_type": "RFC (Proposed Standard)",
       "doc_type_source": "RFC Editor",
       "source": "RFC Editor",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "rfc-9449": {
@@ -165,7 +165,7 @@
       "doc_type": "RFC (Proposed Standard)",
       "doc_type_source": "RFC Editor",
       "source": "RFC Editor",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "rfc-9943": {
@@ -180,7 +180,7 @@
       "doc_type": "RFC (Proposed Standard)",
       "doc_type_source": "RFC Editor",
       "source": "RFC Editor",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "mcp-spec": {
@@ -190,7 +190,7 @@
       "updated": "2026-11-17",
       "message": "docs: align the extensions overview with SEP-3392 (#3565)",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "a2a-spec": {
@@ -200,7 +200,7 @@
       "updated": "2026-07-21",
       "message": "fix(proto): correct gRPC URL example in AgentInterface (#1997)",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "nist-800-53": {
@@ -210,7 +210,7 @@
       "updated": "2026-10-22",
       "message": "Publishing auto-converted artifacts [skip ci]",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     },
     "eu-ai-act": {
@@ -218,7 +218,7 @@
       "state": "checked by hand",
       "updated": "2026-11-18",
       "source": "checked by hand",
-      "checked_at": "2026-11-18T13:07:28Z",
+      "checked_at": "2026-11-18T14:13:27Z",
       "error": ""
     }
   },
