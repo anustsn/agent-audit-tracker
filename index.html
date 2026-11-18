@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Agent Audit Tracker</title>
+<meta name="description" content="Tracks which standards and drafts define audit evidence for AI agent actions, which revision each rating was made at, how the documents cite each other, and what needs re-review. Document facts, researcher classification and evidence quality are kept apart.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="wrap">
+  <h1>Agent Audit Tracker <span class="wip">Work in progress</span></h1>
+  <p class="lede">Which standards and drafts let an auditor answer <em>which agent acted, on whose behalf, with which credential and tool version, and was it allowed?</em></p>
+  <p class="scope"><strong>Audit evidence, not monitoring.</strong> This page does not show what agents are doing. It is a research instrument that tracks the documents defining audit evidence for AI agent actions: their status and revisions, how they cite each other, and new related drafts, each with its source and the time it was checked. It does not publish research findings; those appear only as links to published work.</p>
+  <p class="mode-note" data-catalogue><strong>This version is a catalogue.</strong> It lists and links documents and reports facts from their registries. It does not assess them. The researcher's ratings of which evidence fields each document specifies will be added only after the documents have been read, and will be labelled as one researcher's reading. Rules are stated in Method, every change is recorded, and errors can be reported.</p>
+  <div class="layers-box">
+    <p><strong>Three kinds of information are kept apart.</strong> Each section and detail is labelled. The researcher's questions and ratings are not requirements of any standard.</p>
+    <ul id="layer-key" class="layer-key"></ul>
+  </div>
+  <p class="meta"><span id="checked"></span> · <a href="https://github.com/anustsn/agent-audit-tracker">Source and data</a> · <a href="https://github.com/anustsn/agent-audit-tracker/issues">Report an error</a> · <a href="#method">Method</a> · <a href="#privacy">Privacy</a></p>
+  <div class="toolbar">
+    <label class="search" for="q"><span class="sr">Search standards, drafts, references and fields</span>
+      <input id="q" type="search" placeholder="Search standards, drafts, references, fields (e.g. hash, 8693)" autocomplete="off">
+    </label>
+    <div class="exports" role="group" aria-label="Export">
+      <span class="exports-label">Export</span>
+      <button type="button" data-export="matrix-csv" data-ratings>Matrix CSV</button>
+      <button type="button" data-export="refs-csv">References CSV</button>
+      <button type="button" data-export="ratings-csv" data-ratings>Ratings log CSV</button>
+      <button type="button" data-export="review-csv" data-ratings>Review queue CSV</button>
+      <button type="button" data-export="drafts-csv">Drafts CSV</button>
+      <button type="button" data-export="json">All data JSON</button>
+    </div>
+  </div>
+  <p class="q-info" id="q-info"></p>
+  <p id="status-msg" class="sr" role="status" aria-live="polite"></p>
+  <nav class="toc" aria-label="Sections">
+    <a href="#overview">Overview</a><a href="#scope-section">Coverage</a><a href="#observations-section">Observations</a><a href="#provenance">Provenance</a><a href="#questions" data-ratings>Question view</a><a href="#review" data-ratings>Review queue</a><a href="#coverage" data-ratings>Specification status</a><a href="#references">References</a><a href="#documents">Documents</a><a href="#changes-section">Changes</a><a href="#discovered-section">Related drafts</a>
+  </nav>
+</header>
+
+<main class="wrap" id="main">
+  <section id="overview" aria-label="Overview">
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section id="scope-section">
+    <h2>What this tracker covers <span class="layer layer-res">Researcher classification</span></h2>
+    <p class="hint" id="scope-not-tool"></p>
+    <div class="scroll"><table id="scope-table"></table></div>
+    <p class="hint" id="scope-questions"></p>
+  </section>
+
+  <section id="observations-section">
+    <h2>Observations</h2>
+    <h3>Descriptive statistics <span class="layer layer-auto">Automatic check</span></h3>
+    <p class="hint" id="obs-asof"></p>
+    <ul id="observations" class="obs"></ul>
+    <p class="hint">Counts, not conclusions. They are computed from the data on this page every time it loads, so they change when a document changes<span data-ratings> or a rating is added or revised. The ratings they count are the researcher's</span>.</p>
+    <h3>Researcher observations <span class="layer layer-res">Researcher classification</span></h3>
+    <p class="hint">Dated notes by the researcher. Each records the figures it was based on; if those figures have changed since, the note is marked.</p>
+    <ul id="res-observations" class="obs"></ul>
+    <h3>Research findings</h3>
+    <p class="hint">Findings appear here only after they have been published with a citable identifier, as a link to the publication. The tracker itself does not state findings.</p>
+    <ul id="findings" class="obs"></ul>
+  </section>
+
+  <section id="provenance">
+    <h2>Provenance</h2>
+    <p class="hint" data-catalogue>Where every fact on this page comes from: the registry or API, the time it was fetched, and the exact text or commit it refers to (SHA-256 for Internet-Draft texts, full commit SHA for repositories). The catalogue covers the documents listed; it does not claim that nothing is missing. Roles and document-type labels are the researcher's editorial judgement; other choices are possible.</p>
+    <p class="hint" data-ratings>Everything needed to check a rating again: which text was read (with its SHA-256 or commit), when, by whom, which sections, and how. The coverage described here is what was read; it does not claim that nothing is missing. The evidence questions, ratings and roles are the researcher's editorial judgement; other choices are possible.</p>
+    <details class="howto" data-catalogue>
+      <summary>How to check a fact</summary>
+      <ol>
+        <li>Select a document and note its revision, the time the status was fetched and the source (IETF Datatracker or GitHub).</li>
+        <li>Open the link to the registry page or the archived text; for Internet-Drafts compare the SHA-256 shown with the text you download.</li>
+        <li>For a citation, open the Datatracker page of the citing draft; references are listed per revision.</li>
+        <li>For the history of a fact, see Recent changes and the commit history of the data files. If something is wrong, report it as a GitHub issue.</li>
+      </ol>
+    </details>
+    <details class="howto" data-ratings>
+      <summary>How to re-verify a rating</summary>
+      <ol>
+        <li>Select a cell in Specification status and note the revision it was rated at and the text link.</li>
+        <li>Open the archived text and compare its SHA-256 with the one shown, so you know you are reading the same bytes.</li>
+        <li>Find the identifiers listed in the cell (and the location, where recorded) and read the definition.</li>
+        <li>Compare with the rating and the researcher's note. If you disagree, report it as a GitHub issue.</li>
+        <li>For the history of a rating, see the ratings log below and the commit history of data/fields.json.</li>
+      </ol>
+    </details>
+    <h3>Build <span class="layer layer-doc">Document fact</span></h3>
+    <div id="build-info" class="build"></div>
+    <h3>Documents <span class="layer layer-doc">Document fact</span></h3>
+    <div class="scroll"><table id="doc-prov"></table></div>
+    <div data-ratings>
+      <h3>Matrix columns</h3>
+      <div class="scroll"><table id="prov"></table></div>
+      <h3>Ratings log <span class="layer layer-res">Researcher classification</span></h3>
+      <p class="hint">Every change to a rating, recorded by the update job by comparing the curated file with the previous run: added, status changed, note revised, identifiers or location changed, re-rated at another revision, removed.</p>
+      <div class="scroll"><table id="ratings-log"></table></div>
+    </div>
+  </section>
+
+  <section id="questions" data-ratings>
+    <h2>Audit question view</h2>
+    <p class="hint">Pick one of the researcher's evidence questions to see the requirement units linked to it by coding, the telemetry fields and other documents as rated, what is missing at current revisions, and where it is not specified versus not reviewed.</p>
+    <div class="qv-pick"><label for="qv-select">Question</label> <select id="qv-select"></select></div>
+    <div id="qv" class="qv"></div>
+  </section>
+
+  <section id="review" data-ratings>
+    <h2>Review queue <span class="count" id="review-count"></span></h2>
+    <p class="hint">What has to be read again before the ratings can be relied on: newer revisions, unread documents, cells rated "to check", and current references to drafts that have been replaced.</p>
+    <div class="scroll"><table id="review-table"></table></div>
+  </section>
+
+  <section id="coverage" data-ratings>
+    <h2>Specification status</h2>
+    <p class="hint">Rows are the researcher's evidence questions about one agent action; columns are the tracked documents. Each cell is the researcher's rating of whether the document specifies a field for the question, made after reading the revision shown in Provenance. Identifiers in a cell are written as the document writes them. A cell that was never rated is "not reviewed", which is different from "not specified". Signal codes refer to the <a href="https://github.com/anustsn/agent-telemetry-coverage">agent-telemetry-coverage</a> catalogue.</p>
+    <div class="filters" id="filters"></div>
+    <div class="scroll"><table id="matrix" class="matrix"></table></div>
+    <p class="empty" id="matrix-empty" hidden>No cells match these filters.</p>
+    <div class="legend" id="legend"></div>
+  </section>
+
+  <section id="references">
+    <h2>References between documents</h2>
+    <p class="hint"><span class="layer layer-doc">Document fact</span> Citations recorded by the IETF Datatracker for each tracked Internet-Draft, at the revision that was read or at the current revision. The two are never mixed. A normative reference is a citation type; it does not mean that one document implements the other.</p>
+    <div class="filters" id="ref-controls"></div>
+    <p class="hint" id="refs-info"></p>
+    <div class="scroll"><table id="refs"></table></div>
+    <div data-ratings>
+      <h3>Links found by reading <span class="layer layer-res">Researcher classification</span></h3>
+      <p class="hint">Links to documents outside the Datatracker, extracted by the researcher from the document text. Each has a pointer and stays "Pending" until checked.</p>
+      <div class="scroll"><table id="links"></table></div>
+    </div>
+  </section>
+
+  <section id="documents">
+    <h2>Tracked documents <span class="count" id="doc-count"></span></h2>
+    <p class="hint">Type comes from the registry where one exists (Datatracker), otherwise it is a researcher label; roles are the researcher's grouping and can have several values. State is as reported by the source; maturity (rule) is the researcher's normalisation of it. Implementation stability is a separate document fact. Select a document for details.</p>
+    <p class="hint" id="empty-roles"></p>
+    <div class="scroll"><table id="sources"></table></div>
+  </section>
+
+  <section id="changes-section">
+    <h2>Recent changes <span class="count" id="changes-count"></span></h2>
+    <div class="scroll"><table id="changes"></table></div>
+  </section>
+
+  <section id="discovered-section">
+    <h2>Related drafts to review <span class="count" id="disc-count"></span></h2>
+    <p class="hint">Found automatically: active Internet-Drafts that cite a tracked draft and whose name mentions agents, audit, evidence, identity or authorisation. They have not been reviewed and are not in the matrix.</p>
+    <div class="scroll"><table id="discovered"></table></div>
+  </section>
+
+  <section id="method">
+    <h2>Method</h2>
+    <ul>
+      <li><strong>Purpose.</strong> A research instrument for researchers and auditors. It does not publish findings.</li>
+      <li data-catalogue><strong>Current version: catalogue.</strong> Only document facts are published: status, revisions, citations, related drafts and their provenance. The researcher's ratings are not published yet; the rules below describe how they will be made. Maintained by one person: rules are stated here, every change is recorded in the data history, and errors can be reported as GitHub issues.</li>
+      <li><strong>Three layers.</strong> Document facts come from registries (IETF Datatracker, GitHub) or are recorded by hand with a revision and pointer (data/status.json, data/references.json, data/document_facts.json). Researcher classification covers the evidence questions, ratings, roles, document-type labels, maturity normalisation, coding links, links found by reading and the ratings log (data/fields.json, data/classification.json, data/requirements.json, data/ratings_log.json). Evidence quality is a separate assessment (data/quality.json). The files are never merged.</li>
+      <li><strong>Specification status</strong> is rated only after reading, and each column records the revision that was read, the date and, where recorded, who rated it and which sections were read. "Not specified" means the document was read and does not define it; "not reviewed" means nobody has checked. When a newer revision appears, the column is marked <em>re-check</em> rather than silently kept. Cells are never created in advance.</li>
+      <li><strong>Provenance.</strong> The update job records the archive URL and SHA-256 of each Internet-Draft text that was read and of the current revision, full commit SHAs for repositories, the source commit and workflow run of each build, and the SHA-256 of every curated data file. Every change to a rating is logged.</li>
+      <li><strong>Evidence quality.</strong> Origin (as specified) and integrity of the record format. "Not established" means the research has not determined it, not that the property is absent. A specified telemetry field is not by itself reliable audit evidence. Requirement levels are document facts and are quoted as the document writes them.</li>
+      <li><strong>References</strong> are taken from the Datatracker per revision: the revision that was read and the current one are listed separately, with the differences. A citation to a draft that has since been replaced is flagged; it may have been correct when written. Process references (RFC 2119, RFC 8174, BCP 14) are hidden by default and counted.</li>
+      <li><strong>Revision check (automatic).</strong> For a column marked re-check, the update job compares the revision that was read with the current one and reports changed lines, added or removed section headings, and whether each recorded field identifier still appears or sits in a changed line. This only points to where to read; it does not replace reading.</li>
+      <li><strong>Requirement links</strong> in the question view come from the coding in the <a href="https://github.com/anustsn/agent-telemetry-coverage">agent-telemetry-coverage</a> dataset (question → monitoring signal → OWASP requirement unit). Only identifiers are copied. ISO/IEC 27001 and PCI DSS are not coded yet.</li>
+      <li><strong>Authority</strong> (document type) is shown for context and is never used as a weight.</li>
+      <li><strong>Limits.</strong> The tracker covers the documents listed; it does not claim that nothing is missing. Internet-Drafts are work in progress. Nothing here is legal or compliance advice. Corrections are welcome as GitHub issues.</li>
+    </ul>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy</h2>
+    <ul>
+      <li>The page sets no cookies, stores nothing in your browser, contains no tracking or advertising code, and loads nothing from other servers. A content security policy tells the browser not to load scripts, styles or anything else from elsewhere and not to send data anywhere.</li>
+      <li>Search, filters and exports run in your browser only. Nothing you type is transmitted.</li>
+      <li>The page is hosted on GitHub Pages. GitHub states that when a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes (<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection">GitHub documentation</a>). The maintainer does not receive these logs.</li>
+      <li>Links to other websites open without telling them which page you came from.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Maintained by Anutsetsen Enkhzorigt. Code: MIT. Data: CC BY 4.0, except data/requirements.json (CC BY-SA 4.0). Linked documents keep their own licences. <span id="footer-build"></span></p>
+</footer>
+
+<dialog id="panel" class="panel" aria-labelledby="panel-title">
+  <div class="panel-head">
+    <h2 id="panel-title" tabindex="-1"></h2>
+    <button type="button" id="panel-close" class="icon-btn" aria-label="Close details">&times;</button>
+  </div>
+  <div id="panel-body" class="panel-body"></div>
+</dialog>
+
+<script src="data/bundle.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
