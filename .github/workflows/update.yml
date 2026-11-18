@@ -11,6 +11,8 @@ on:
   workflow_dispatch:       # "Run workflow" button in the Actions tab
   push:
     branches: [main]       # any change you commit; the workflow's own commit does not re-trigger it
+  schedule:
+    - cron: "0 1 * * 1"    # Даваа бүр 01:00 UTC = Улаанбаатарын 09:00
 
 permissions: {}            # nothing by default; each job asks only for what it needs
 
