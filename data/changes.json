@@ -10,7 +10,7 @@
     "date": "2026-11-17",
     "id": "ietf-aims",
     "field": "replaced_by",
-    "old": "draft-klrc-aiagent-auth (individual)",
+    "old": "draft-klrc-aiagent-auth",
     "new": "draft-ietf-wimse-aims (WIMSE working group)"
   },
   {
