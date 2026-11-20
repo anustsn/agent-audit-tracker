@@ -1,4 +1,11 @@
 {
   "about": "Research findings are listed only after publication with a citable identifier (DOI or permanent URL). Each item: {\"date\", \"title\", \"citation\", \"url\"}. The tracker does not state findings itself.",
-  "items": []
+  "items": [
+    {
+      "date": "2026-11-20",
+      "title": "Required as a capability, not as a record: accountability evidence for AI agent actions in NIST SP 800-53, OpenTelemetry GenAI telemetry and a multi-agent platform's public records",
+      "citation": "Enkhzorigt, A. (2026). Preprint v1.0, Zenodo. doi:10.5281/zenodo.24405379",
+      "url": "https://doi.org/10.5281/zenodo.24405379"
+    }
+  ]
 }
