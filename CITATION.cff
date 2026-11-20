@@ -4,6 +4,7 @@ title: "Agent Audit Tracker: standards and drafts for audit evidence of AI agent
 type: dataset
 version: 1.0.0
 date-released: 2026-11-21
+doi: 10.5281/zenodo.24405157
 authors:
   - given-names: Anutsetsen
     family-names: Enkhzorigt
