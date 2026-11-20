@@ -40,5 +40,54 @@
     "field": "version",
     "old": "e6658f1",
     "new": "d28355d"
+  },
+  {
+    "date": "2026-11-20",
+    "id": "otel-genai",
+    "field": "version",
+    "old": "d28355d",
+    "new": "622b2b6"
+  },
+  {
+    "date": "2026-11-20",
+    "id": "ietf-gilda",
+    "field": "version",
+    "old": "-03",
+    "new": "-04"
+  },
+  {
+    "date": "2026-11-20",
+    "id": "iso-27001-a815",
+    "field": "version",
+    "old": "2022",
+    "new": "2022, with Amd 1:2024"
+  },
+  {
+    "date": "2026-11-20",
+    "id": "mcp-spec",
+    "field": "version",
+    "old": "d4b3172",
+    "new": "bbc31f8"
+  },
+  {
+    "date": "2026-11-20",
+    "id": "eu-ai-act",
+    "field": "version",
+    "old": "Regulation (EU) 2024/1689, OJ 12 July 2024",
+    "new": "Regulation (EU) 2024/1689 (OJ 12 July 2024), as amended by Regulation (EU) 2026/1744 (OJ 24 July 2026; in force 27 July 2026)"
+  },
+  {
+    "date": "2026-11-20",
+    "id": "draft-molas-agent-principal-refs",
+    "field": "new related draft",
+    "old": null,
+    "new": "-00"
+  },
+  {
+    "date": "2026-11-20",
+    "id": "draft-sweeney-oauth-brokered-authorization",
+    "field": "new related draft",
+    "old": null,
+    "new": "-00"
   }
 ]

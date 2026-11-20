@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-18T15:34:20Z",
+ "checked_at": "2026-11-20T18:28:28Z",
  "process_refs": [
   "rfc2119",
   "rfc8174",
@@ -236,7 +236,7 @@
   "ietf-gilda": {
    "error": "",
    "current": {
-    "doc": "draft-gilda-audit-agent-audit-record-03",
+    "doc": "draft-gilda-audit-agent-audit-record-04",
     "refs": [
      {
       "target": "draft-asor-wimse-agent-delegation-chain",
@@ -291,8 +291,28 @@
       "type": "normative"
      },
      {
+      "target": "rfc7517",
+      "type": "normative"
+     },
+     {
+      "target": "rfc7523",
+      "type": "informative"
+     },
+     {
+      "target": "rfc7591",
+      "type": "informative"
+     },
+     {
+      "target": "rfc7638",
+      "type": "normative"
+     },
+     {
       "target": "rfc7942",
       "type": "informative"
+     },
+     {
+      "target": "rfc8037",
+      "type": "normative"
      },
      {
       "target": "rfc8174",
@@ -301,6 +321,10 @@
      {
       "target": "rfc8785",
       "type": "normative"
+     },
+     {
+      "target": "rfc9068",
+      "type": "informative"
      },
      {
       "target": "rfc9162",
@@ -489,7 +513,7 @@
    "state": "Active",
    "std_level": "",
    "group": "rats",
-   "rev": "05"
+   "rev": "06"
   },
   "draft-ietf-wimse-aims": {
    "title": "AI Identity Management System",
@@ -676,6 +700,13 @@
    "group": "json",
    "rev": ""
   },
+  "rfc7517": {
+   "title": "JSON Web Key (JWK)",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "jose",
+   "rev": ""
+  },
   "rfc7523": {
    "title": "JSON Web Token (JWT) Profile for OAuth 2.0 Client Authentication and Authorization Grants",
    "state": "Published",
@@ -716,6 +747,13 @@
    "state": "Published",
    "std_level": "Informational",
    "group": "cfrg",
+   "rev": ""
+  },
+  "rfc8037": {
+   "title": "CFRG Elliptic Curve Diffie-Hellman (ECDH) and Signatures in JSON Object Signing and Encryption (JOSE)",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "jose",
    "rev": ""
   },
   "rfc8126": {

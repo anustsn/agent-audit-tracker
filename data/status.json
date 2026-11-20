@@ -1,24 +1,24 @@
 {
-  "checked_at": "2026-11-18T15:34:20Z",
+  "checked_at": "2026-11-20T18:28:28Z",
   "sources": {
     "otel-genai": {
-      "version": "d28355d",
-      "sha": "d28355d",
+      "version": "622b2b6",
+      "sha": "622b2b6",
       "state": "latest commit",
-      "updated": "2026-11-18",
-      "message": "reference: update conformance runner pin (#702)",
+      "updated": "2026-11-20",
+      "message": "Flatten attribute group nesting and reduce duplication (#735)",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "otel-pr-350": {
       "version": "open (draft)",
       "state": "open (draft)",
-      "updated": "2026-10-26",
-      "updated_full": "2026-10-26T19:52:07Z",
+      "updated": "2026-11-18",
+      "updated_full": "2026-11-18T18:19:33Z",
       "title": "Add gen_ai.agent.identity.id and gen_ai.agent.identity.name: agent identity distinct from the deployed resource",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "otel-core-4022": {
@@ -31,7 +31,7 @@
       "updated": "2026-10-08",
       "title": "Semantic conventions for IAM",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "ietf-aat": {
@@ -46,7 +46,7 @@
       "doc_type": "Individual Internet-Draft",
       "doc_type_source": "IETF Datatracker (group type)",
       "source": "IETF Datatracker API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "ietf-aims": {
@@ -61,14 +61,14 @@
       "doc_type": "WG Internet-Draft",
       "doc_type_source": "IETF Datatracker (group type)",
       "source": "IETF Datatracker API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "ietf-gilda": {
-      "version": "-03",
-      "rev": "03",
-      "updated": "2026-10-29",
-      "expires": "2027-05-02",
+      "version": "-04",
+      "rev": "04",
+      "updated": "2026-11-19",
+      "expires": "2027-05-23",
       "state": "Active",
       "group": "none",
       "group_type": "Individual",
@@ -76,7 +76,7 @@
       "doc_type": "Individual Internet-Draft",
       "doc_type_source": "IETF Datatracker (group type)",
       "source": "IETF Datatracker API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "ietf-munoz": {
@@ -91,7 +91,7 @@
       "doc_type": "Individual Internet-Draft",
       "doc_type_source": "IETF Datatracker (group type)",
       "source": "IETF Datatracker API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "nist-nccoe": {
@@ -101,7 +101,7 @@
       "updated": "2026-10-29",
       "message": "adds second blog post",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "owasp-asi": {
@@ -109,7 +109,7 @@
       "state": "checked by hand",
       "updated": "2026-11-13",
       "source": "checked by hand",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "owasp-mcp": {
@@ -119,15 +119,15 @@
       "updated": "2026-07-29",
       "message": "Merge pull request #38 from EricFinland/mcp03-static-detection-indicators",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "iso-27001-a815": {
-      "version": "2022",
+      "version": "2022, with Amd 1:2024",
       "state": "checked by hand",
-      "updated": "2026-11-16",
+      "updated": "2026-11-20",
       "source": "checked by hand",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "pci-dss-10": {
@@ -135,7 +135,7 @@
       "state": "checked by hand",
       "updated": "2026-11-16",
       "source": "checked by hand",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "rfc-8693": {
@@ -150,7 +150,7 @@
       "doc_type": "RFC (Proposed Standard)",
       "doc_type_source": "RFC Editor",
       "source": "RFC Editor",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "rfc-9449": {
@@ -165,7 +165,7 @@
       "doc_type": "RFC (Proposed Standard)",
       "doc_type_source": "RFC Editor",
       "source": "RFC Editor",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "rfc-9943": {
@@ -180,17 +180,17 @@
       "doc_type": "RFC (Proposed Standard)",
       "doc_type_source": "RFC Editor",
       "source": "RFC Editor",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "mcp-spec": {
-      "version": "d4b3172",
-      "sha": "d4b3172",
+      "version": "bbc31f8",
+      "sha": "bbc31f8",
       "state": "latest commit",
-      "updated": "2026-11-17",
-      "message": "docs: align the extensions overview with SEP-3392 (#3565)",
+      "updated": "2026-11-20",
+      "message": "docs(SEP-3415): register the Events extension (#3568)",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "a2a-spec": {
@@ -200,7 +200,7 @@
       "updated": "2026-07-21",
       "message": "fix(proto): correct gRPC URL example in AgentInterface (#1997)",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "nist-800-53": {
@@ -210,15 +210,15 @@
       "updated": "2026-10-22",
       "message": "Publishing auto-converted artifacts [skip ci]",
       "source": "GitHub REST API",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     },
     "eu-ai-act": {
-      "version": "Regulation (EU) 2024/1689, OJ 12 July 2024",
+      "version": "Regulation (EU) 2024/1689 (OJ 12 July 2024), as amended by Regulation (EU) 2026/1744 (OJ 24 July 2026; in force 27 July 2026)",
       "state": "checked by hand",
-      "updated": "2026-11-18",
+      "updated": "2026-11-20",
       "source": "checked by hand",
-      "checked_at": "2026-11-18T15:34:20Z",
+      "checked_at": "2026-11-20T18:28:28Z",
       "error": ""
     }
   },
@@ -549,6 +549,19 @@
       "url": "https://datatracker.ietf.org/doc/draft-milan-agent-decision-commitment/"
     },
     {
+      "name": "draft-molas-agent-principal-refs",
+      "title": "Accountable Principal References for Delegated Agent Requests: Properties and Evaluation",
+      "version": "-00",
+      "updated": "2026-11-18",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-20",
+      "url": "https://datatracker.ietf.org/doc/draft-molas-agent-principal-refs/"
+    },
+    {
       "name": "draft-nandakumar-agent-sd-card",
       "title": "Agent SD-Card: Selective Disclosure of Agent Metadata for Discovery and Authentication",
       "version": "-00",
@@ -772,6 +785,19 @@
       "url": "https://datatracker.ietf.org/doc/draft-sparysh-pala-audit/"
     },
     {
+      "name": "draft-sweeney-oauth-brokered-authorization",
+      "title": "OAuth Brokered Authorization: Grant Custody for Short-Lived Client Instances",
+      "version": "-00",
+      "updated": "2026-11-20",
+      "state": "Active",
+      "group": "none",
+      "cites": [
+        "draft-ietf-wimse-aims"
+      ],
+      "first_seen": "2026-11-20",
+      "url": "https://datatracker.ietf.org/doc/draft-sweeney-oauth-brokered-authorization/"
+    },
+    {
       "name": "draft-thaha-scitt-agent-execution-evidence",
       "title": "Agent Execution Evidence: A SCITT Profile for Verifiable Records of AI Agent Runs",
       "version": "-02",
@@ -888,10 +914,10 @@
     "otel-genai": {
       "error": "",
       "current": {
-        "short": "d28355d",
-        "sha": "d28355d28cbe9ff158ecf22d85f9e078e43f7b20",
-        "url": "https://github.com/open-telemetry/semantic-conventions-genai/tree/d28355d28cbe9ff158ecf22d85f9e078e43f7b20",
-        "date": "2026-11-18T03:11:38Z"
+        "short": "622b2b6",
+        "sha": "622b2b6073b15e5ed886c3c12a65a892b9cd5c70",
+        "url": "https://github.com/open-telemetry/semantic-conventions-genai/tree/622b2b6073b15e5ed886c3c12a65a892b9cd5c70",
+        "date": "2026-11-20T01:28:57Z"
       }
     },
     "otel-pr-350": {
@@ -899,7 +925,7 @@
       "current": {
         "head_sha": "ce7dd36ed38b5822de5e615401b5ae4b05a3f888",
         "url": "https://github.com/open-telemetry/semantic-conventions-genai/pull/350",
-        "updated": "2026-10-26T19:52:07Z"
+        "updated": "2026-11-18T18:19:33Z"
       }
     },
     "otel-core-4022": {
@@ -932,11 +958,11 @@
     "ietf-gilda": {
       "error": "",
       "current": {
-        "doc": "draft-gilda-audit-agent-audit-record-03",
-        "url": "https://www.ietf.org/archive/id/draft-gilda-audit-agent-audit-record-03.txt",
-        "sha256": "c5d0b74686b62b5d1fd954b2dae0cf02b402c87a06efa6fc82abf8fa847ed786",
-        "bytes": 198134,
-        "fetched_at": "2026-11-18T11:35:13Z"
+        "doc": "draft-gilda-audit-agent-audit-record-04",
+        "url": "https://www.ietf.org/archive/id/draft-gilda-audit-agent-audit-record-04.txt",
+        "sha256": "5592994311a3db303405eacebcb203f589b7aa083d81bcdb291a3a78d4adbde6",
+        "bytes": 270006,
+        "fetched_at": "2026-11-20T18:28:47Z"
       }
     },
     "ietf-munoz": {
@@ -1000,10 +1026,10 @@
     "mcp-spec": {
       "error": "",
       "current": {
-        "short": "d4b3172",
-        "sha": "d4b317231161ee96d3eefb2448bda4230c76f4c6",
-        "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/tree/d4b317231161ee96d3eefb2448bda4230c76f4c6",
-        "date": "2026-11-17T17:06:53Z"
+        "short": "bbc31f8",
+        "sha": "bbc31f8ded5762eae4df115b93942f5e71c8b3a7",
+        "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/tree/bbc31f8ded5762eae4df115b93942f5e71c8b3a7",
+        "date": "2026-11-20T10:50:43Z"
       }
     },
     "a2a-spec": {
