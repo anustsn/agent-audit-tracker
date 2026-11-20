@@ -39,29 +39,29 @@ The page never presents the researcher's classification as a requirement of a st
 A fourth label, **Automatic check**, marks heuristics computed by the update script (the revision comparison).
 
 ## What is on the page
+Items marked *(ratings mode)* are hidden in the current catalogue version (`"show_ratings": false`); they appear only when ratings are switched on.
+
 - **Observations.** Three tiers kept apart:
   - descriptive statistics, computed from the data each time the page loads;
   - researcher observations, dated notes that are marked when the figures they were based on change;
   - research findings, listed only as links to published work with a citable identifier.
-- **Provenance.** Everything needed to check a rating again:
-  - the archive URL and SHA-256 of each Internet-Draft text that was read, and full commit SHAs for repositories;
-  - who rated and which sections were read, where recorded;
+- **Provenance.** Everything needed to check the data again:
+  - the archive URL and SHA-256 of each Internet-Draft and RFC text (fetched and hashed automatically; whether a text was read is recorded separately), and full commit SHAs for repositories;
   - the build (source commit, workflow run, SHA-256 of every curated file);
-  - a log of every change to a rating;
-  - step-by-step instructions to re-verify a rating.
-- **Overview.** Tracked documents; questions rated explicit at a current revision (and how many more an older read would add); documents needing review; current references to drafts that have since been replaced; related drafts found.
-- **Audit question view.** For one of the researcher's evidence questions:
+  - *(ratings mode)* who rated and which sections were read, a log of every change to a rating, and step-by-step instructions to re-verify a rating.
+- **Overview.** Tracked documents; documents updated in the 30 days before the last check; current references to drafts that have since been replaced; related drafts found. *(ratings mode)* Questions rated explicit at a current revision (and how many more an older read would add); documents needing review.
+- *(ratings mode)* **Audit question view.** For one of the researcher's evidence questions:
   - the OWASP requirement units linked to it by coding;
   - telemetry fields and other documents, as rated, grouped by role;
   - what is missing at current revisions;
   - where it is not specified versus not reviewed.
-- **Review queue.** Newer revisions (with the automatic revision check), unread documents, cells rated "to check", current references to replaced drafts, failed status checks.
-- **Specification status.** The matrix: evidence questions × documents. Six statuses: explicitly specified, partially specified, referenced externally, to check, not specified (read, not defined), not reviewed (nobody checked). Cells are never created in advance; a missing cell is shown as not reviewed. Filters by question, document and status.
-- **Provenance.** For each matrix column: document type, the revision read, the date, how it was read, the current revision and where the status came from.
+- *(ratings mode)* **Review queue.** Newer revisions (with the automatic revision check), unread documents, cells rated "to check", current references to replaced drafts, failed status checks.
+- *(ratings mode)* **Specification status.** The matrix: evidence questions × documents. Six statuses: explicitly specified, partially specified, referenced externally, to check, not specified (read, not defined), not reviewed (nobody checked). Cells are never created in advance; a missing cell is shown as not reviewed. Filters by question, document and status.
+- *(ratings mode)* **Provenance.** For each matrix column: document type, the revision read, the date, how it was read, the current revision and where the status came from.
 - **References between documents.** Citations recorded by the IETF Datatracker per revision: the revision that was read and the current one, never mixed, with the differences. Normative and informative citations are separated. Process references (RFC 2119, RFC 8174, BCP 14) are hidden by default and counted. Links to documents outside the Datatracker (MCP, A2A, in-toto) are listed separately as links found by reading, each with a pointer and a verification state. A normative reference is a citation type; it does not mean that one document implements the other.
 - **Tracked documents.** Type (from the registry where one exists, otherwise a researcher label), roles (researcher, several allowed), version, state as reported with the researcher's maturity normalisation, and declared stability kept separate.
 - **Recent changes** and **related drafts to review** (active drafts that cite a tracked draft; not reviewed).
-- **Search and export.** The search box filters every table. Exports: matrix (CSV, one row per cell, columns prefixed by layer), references (CSV, both revision views), review queue, related drafts, all data (JSON, with the layer of each file). Links of the form `#doc=ietf-aat`, `#cell=ietf-aat/credential` and `#question=credential` open a detail panel directly.
+- **Search and export.** The search box filters every table. Exports: references (CSV, both revision views), related drafts, all data (JSON, with the layer of each file); *(ratings mode)* matrix (CSV, one row per cell, columns prefixed by layer) and review queue. Links of the form `#doc=ietf-aat`, `#cell=ietf-aat/credential` and `#question=credential` open a detail panel directly.
 
 ## How it is updated
 `scripts/update_status.py` uses the Python standard library only.
@@ -71,7 +71,7 @@ A fourth label, **Automatic check**, marks heuristics computed by the update scr
 - **Discovery** of active drafts that cite a tracked draft, with the date each was first seen.
 - It appends to `data/changes.json` and rebuilds `data/bundle.js`, which the page reads.
 
-`.github/workflows/update.yml` runs the script when you press **Run workflow** in the Actions tab and on every push to `main`. It commits the refreshed data with the built-in `GITHUB_TOKEN` (no other secret is used) and then publishes the site with the GitHub Pages actions in the same run, because commits made with `GITHUB_TOKEN` do not start a Pages build on their own. Set **Settings → Pages → Source** to **GitHub Actions**.
+`.github/workflows/update.yml` runs the script once a week (Mondays at 01:00 UTC), when you press **Run workflow** in the Actions tab, and on every push to `main`. It commits the refreshed data with the built-in `GITHUB_TOKEN` (no other secret is used) and then publishes the site with the GitHub Pages actions in the same run, because commits made with `GITHUB_TOKEN` do not start a Pages build on their own. Set **Settings → Pages → Source** to **GitHub Actions**.
 
 Only document facts are refreshed automatically. The researcher's ratings, roles and quality assessments change only when someone edits the curated files. The **Observations** section is computed in the browser from the published data, so it always matches it.
 
@@ -104,7 +104,7 @@ python3 -I scripts/update_status.py
   - two-factor authentication on the maintainer account.
 
 ## Scope and limits
-- **Coverage.** The page has a table "What this tracker covers", which lists the areas of agent-audit criteria that are tracked, partly tracked, not tracked or out of scope. The tracker does not audit agents and holds no organisation's evidence.
+- **Coverage.** The page has a table "What this tracker covers", which lists the areas of agent-audit criteria that are tracked, partly tracked, tracked for status only, not tracked or out of scope. The tracker does not audit agents and holds no organisation's evidence.
 - **In scope:** audit evidence for individual agent actions: identity, authorisation, tool provenance and record integrity.
 - **Out of scope:** runtime monitoring, model evaluation and safety testing.
 - **Moving targets.** Internet-Drafts are work in progress and may change or expire. The matrix reflects the revision named in each column, not later ones.

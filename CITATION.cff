@@ -2,14 +2,15 @@ cff-version: 1.2.0
 message: "If you use this tracker or its data, please cite it as below."
 title: "Agent Audit Tracker: standards and drafts for audit evidence of AI agent actions"
 type: dataset
-version: 0.1.0
-date-released: 2026-11-17
+version: 1.0.0
+date-released: 2026-11-21
 authors:
   - given-names: Anutsetsen
     family-names: Enkhzorigt
 license:
   - MIT
   - CC-BY-4.0
+  - CC-BY-SA-4.0
 repository-code: "https://github.com/anustsn/agent-audit-tracker"
 url: "https://anustsn.github.io/agent-audit-tracker/"
 keywords:

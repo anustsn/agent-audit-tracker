@@ -190,7 +190,7 @@
   },
   "related_research_types": {
     "0": "Research paper",
-    "1": "Research paper",
+    "1": "Dataset",
     "2": "Dataset"
   },
   "coverage": {
@@ -225,7 +225,7 @@
         "area": "Regulation",
         "examples": "EU AI Act Article 12 (record-keeping) and Article 26(6) (deployers keeping logs)",
         "status": "status only",
-        "note": "Checked by hand. Amendments are not tracked."
+        "note": "Checked by hand, including amendments (latest: Regulation (EU) 2026/1744, in force 27 July 2026)."
       },
       {
         "area": "AI management and risk frameworks",

@@ -135,9 +135,10 @@
       "url": "https://www.iso.org/standard/27001",
       "track": {
         "type": "manual",
-        "version": "2022",
-        "checked": "2026-11-16"
+        "version": "2022, with Amd 1:2024",
+        "checked": "2026-11-20"
       },
+      "note": "Checked by hand against ISO's open data: edition 3 (2022) is current, and Amendment 1:2024 (climate action changes) has been published. Whether the amendment touches Annex A was not checked; the standard text is not read for this tracker.",
       "matrix": false
     },
     {
@@ -202,7 +203,7 @@
         "type": "github_repo",
         "repo": "modelcontextprotocol/modelcontextprotocol"
       },
-      "note": "Status only; not read for this tracker. Tracks the latest commit of the specification repository.",
+      "note": "Status only; not read for this tracker. Tracks the latest commit anywhere in the specification repository, including documentation changes, so a new commit does not by itself mean the specification changed.",
       "matrix": false
     },
     {
@@ -216,7 +217,7 @@
         "repo": "a2aproject/A2A",
         "path": "specification"
       },
-      "note": "Status only; not read for this tracker. Tracks the latest commit to the specification folder.",
+      "note": "Status only; not read for this tracker. Tracks only the specification/ folder (protocol definition and schema). Changes to the prose specification (docs/specification.md) and release tags are not tracked.",
       "matrix": false
     },
     {
@@ -230,7 +231,7 @@
         "repo": "usnistgov/oscal-content",
         "path": "nist.gov/SP800-53/rev5"
       },
-      "note": "Status only; not read for this tracker. Tracks the latest commit to NIST's OSCAL version of the catalogue.",
+      "note": "Status only; not read for this tracker. Tracks the latest commit to NIST's OSCAL version of the whole catalogue (all families, not only AU, IA and AC). Catalogue release 5.2.0 as of 2026-11-20.",
       "matrix": false
     },
     {
@@ -241,10 +242,10 @@
       "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
       "track": {
         "type": "manual",
-        "version": "Regulation (EU) 2024/1689, OJ 12 July 2024",
-        "checked": "2026-11-18"
+        "version": "Regulation (EU) 2024/1689 (OJ 12 July 2024), as amended by Regulation (EU) 2026/1744 (OJ 24 July 2026; in force 27 July 2026)",
+        "checked": "2026-11-20"
       },
-      "note": "Checked by hand; not read for this tracker. Later amendments are not tracked; see the consolidated text on EUR-Lex. Nothing here is legal advice.",
+      "note": "Checked by hand; not read for this tracker. Amendments are checked by hand; the latest is Regulation (EU) 2026/1744 (Digital Omnibus on AI). It does not change the text of Articles 12 and 26, but Chapter III Sections 1 to 3, which contain them, now apply from 2 December 2027 (Annex III systems) and 2 August 2028 (Annex I systems). Consolidated text of 27 July 2026: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727 . Nothing here is legal advice.",
       "matrix": false
     }
   ],
@@ -254,7 +255,7 @@
       "url": "https://arxiv.org/abs/2605.12078"
     },
     {
-      "title": "Bánáti, Pardi, Érsok, supplementary material for \"Bringing AI and Agentic AI Systems under SOC Supervision\" (Zenodo)",
+      "title": "Bánáti et al., supplementary material for \"Bringing AI and Agentic AI Systems under SOC Supervision: An Operational and Architectural Framework\" (Zenodo dataset)",
       "url": "https://doi.org/10.5281/zenodo.23739618"
     },
     {

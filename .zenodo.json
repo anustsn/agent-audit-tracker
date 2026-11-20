@@ -1,0 +1,35 @@
+{
+  "title": "Agent Audit Tracker: standards and drafts for audit evidence of AI agent actions",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "description": "<p>A public, status-only catalogue of the standards, specifications and Internet-Drafts that define audit evidence for AI agent actions (OpenTelemetry GenAI conventions, IETF agent identity and audit-record drafts, OAuth RFCs, SCITT, MCP, A2A, OWASP agentic lists, NIST SP 800-53, ISO/IEC 27001 A.8.15, PCI DSS Requirement 10, EU AI Act Article 12). A weekly job records each document's revision, status, citations, related drafts and provenance (source, revision, SHA-256, check time). It does not assess documents or monitor agents.</p><p>Live site: https://anustsn.github.io/agent-audit-tracker/</p><p>Code is MIT-licensed. Data files are CC BY 4.0, except data/requirements.json, which is CC BY-SA 4.0 (derived from OWASP); see LICENSE-DATA.md.</p>",
+  "creators": [
+    {
+      "name": "Enkhzorigt, Anutsetsen",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "AI agents",
+    "audit evidence",
+    "agent identity",
+    "authorization",
+    "OpenTelemetry",
+    "IETF",
+    "provenance",
+    "standards tracking"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://anustsn.github.io/agent-audit-tracker/",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://github.com/anustsn/agent-telemetry-coverage",
+      "relation": "references",
+      "resource_type": "dataset"
+    }
+  ]
+}

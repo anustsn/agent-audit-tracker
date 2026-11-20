@@ -330,8 +330,8 @@
     tiles.appendChild(tile("Tracked documents", String(sources.length),
       withApi.length + " checked automatically, " + (sources.length - withApi.length) + " by hand; " +
       (roles.length - emptyRoles.length) + " of " + roles.length + " roles have a tracked document", "/documents"));
-    tiles.appendChild(tile("Updated in the last 30 days", String(recent.length) + " / " + withApi.length,
-      "New revision, commit or update reported by the registry", "/documents", [layer("doc")]));
+    tiles.appendChild(tile("Updated in the 30 days before the last check", String(recent.length) + " / " + withApi.length,
+      "New revision, commit or update reported by the registry; RFCs are fixed texts and never count", "/documents", [layer("doc")]));
     tiles.appendChild(tile("Current references to replaced drafts", String(replacedRefs.length),
       "A current revision cites a draft that has since been replaced (Datatracker)", "/references", [layer("doc")]));
     tiles.appendChild(tile("Related drafts found", String(drafts.length), draftSub, "/drafts", [layer("auto")]));
