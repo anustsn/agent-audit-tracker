@@ -96,5 +96,19 @@
     "field": "version",
     "old": "622b2b6",
     "new": "4dbe333"
+  },
+  {
+    "date": "2026-11-21",
+    "id": "otel-genai",
+    "field": "version",
+    "old": "4dbe333",
+    "new": "0f33852"
+  },
+  {
+    "date": "2026-11-21",
+    "id": "ietf-munoz",
+    "field": "version",
+    "old": "-01",
+    "new": "-02"
   }
 ]

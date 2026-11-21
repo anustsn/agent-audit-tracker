@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-20T19:19:51Z",
+ "checked_at": "2026-11-21T01:08:38Z",
  "process_refs": [
   "rfc2119",
   "rfc8174",
@@ -337,8 +337,12 @@
   "ietf-munoz": {
    "error": "",
    "current": {
-    "doc": "draft-munoz-wimse-authorization-evidence-01",
+    "doc": "draft-munoz-wimse-authorization-evidence-02",
     "refs": [
+     {
+      "target": "draft-chueayen-attestation-receipts",
+      "type": "informative"
+     },
      {
       "target": "draft-emirdag-scitt-ai-agent-execution",
       "type": "informative"
@@ -348,20 +352,40 @@
       "type": "informative"
      },
      {
+      "target": "draft-ietf-wimse-aims",
+      "type": "normative"
+     },
+     {
       "target": "draft-ietf-wimse-arch",
       "type": "informative"
+     },
+     {
+      "target": "draft-ietf-wimse-http-signature",
+      "type": "normative"
      },
      {
       "target": "draft-ietf-wimse-identifier",
       "type": "informative"
      },
      {
-      "target": "draft-klrc-aiagent-auth",
-      "type": "normative"
+      "target": "draft-liu-oauth-authorization-evidence",
+      "type": "informative"
+     },
+     {
+      "target": "draft-mcguinness-oauth-mission",
+      "type": "informative"
      },
      {
       "target": "draft-munoz-scitt-permit-profile",
       "type": "normative"
+     },
+     {
+      "target": "draft-pidlisnyi-aps",
+      "type": "informative"
+     },
+     {
+      "target": "draft-thaha-wimse-agent-evidence-binding",
+      "type": "informative"
      },
      {
       "target": "draft-veridom-omp",
@@ -389,6 +413,14 @@
      },
      {
       "target": "rfc9421",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9942",
+      "type": "normative"
+     },
+     {
+      "target": "rfc9943",
       "type": "normative"
      }
     ]
@@ -431,6 +463,13 @@
    "std_level": "",
    "group": "none",
    "rev": "03"
+  },
+  "draft-chueayen-attestation-receipts": {
+   "title": "Enforcement Attestation Receipts for AI Inference and Agent Action Decisions",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "05"
   },
   "draft-ehstand-oversight-acts": {
    "title": "Terminology for Human Oversight Acts in Automated and Agentic Systems",
@@ -534,7 +573,7 @@
    "state": "Active",
    "std_level": "",
    "group": "wimse",
-   "rev": "08"
+   "rev": "09"
   },
   "draft-ietf-wimse-identifier": {
    "title": "Workload Identifier",
@@ -564,18 +603,22 @@
    "group": "none",
    "rev": "05"
   },
-  "draft-klrc-aiagent-auth": {
-   "title": "AI Agent Authentication and Authorization",
-   "state": "Replaced",
-   "std_level": "",
-   "group": "wimse",
-   "rev": "03",
-   "replaced_by": [
-    "draft-ietf-wimse-aims"
-   ]
-  },
   "draft-konda-agentproto-evaluation-state": {
    "title": "Preserving Evaluation State in Agent Protocol Decisions",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "02"
+  },
+  "draft-liu-oauth-authorization-evidence": {
+   "title": "Authorization Evidence and Audit Trail for OAuth 2.0 Access Tokens",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "02"
+  },
+  "draft-mcguinness-oauth-mission": {
+   "title": "Mission-Bound Authorization for OAuth 2.0",
    "state": "Active",
    "std_level": "",
    "group": "none",
@@ -586,14 +629,21 @@
    "state": "Active",
    "std_level": "",
    "group": "none",
-   "rev": "01"
+   "rev": "02"
   },
   "draft-munoz-wimse-authorization-evidence": {
-   "title": "Signed Authorization-Evidence Records for WIMSE-Authorized AI Agent Actions",
+   "title": "Signed Authorization-Evidence Records for AI Agent Actions Using WIMSE Workload Identity",
    "state": "Active",
    "std_level": "",
    "group": "none",
-   "rev": "01"
+   "rev": "02"
+  },
+  "draft-pidlisnyi-aps": {
+   "title": "Agent Passport System (APS): Verifiable Authority, Lifecycle, Enforcement, and Evidence for AI Agents",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "04"
   },
   "draft-sharif-mcps-secure-mcp": {
    "title": "MCPS: Cryptographic Security Layer for the Model Context Protocol",
@@ -608,6 +658,13 @@
    "std_level": "",
    "group": "none",
    "rev": "06"
+  },
+  "draft-thaha-wimse-agent-evidence-binding": {
+   "title": "Evidence Binding for AI Agent Credentials",
+   "state": "Active",
+   "std_level": "",
+   "group": "none",
+   "rev": "03"
   },
   "draft-uppalapati-wimse-pq-agent-identity": {
    "title": "Post-Quantum Requirements for Software and AI Agent Identity",
@@ -852,6 +909,13 @@
    "state": "Published",
    "std_level": "Proposed Standard",
    "group": "oauth",
+   "rev": ""
+  },
+  "rfc9942": {
+   "title": "CBOR Object Signing and Encryption (COSE) Receipts",
+   "state": "Published",
+   "std_level": "Proposed Standard",
+   "group": "cose",
    "rev": ""
   },
   "rfc9943": {
