@@ -1,0 +1,11 @@
+question,score,basis
+agent,P,"chat sender ID platform-assigned (coverage 1.0); study authors are free text, none linked for 0.9% of studies"
+verified,N,column-name scan hits: none
+credential,N,column-name scan hits: none
+decision,N,column-name scan hits: none
+principal,P,lab pseudonym only (group level); operators removed in the release
+tool,P,environment-type files listed: 1099; tool column hits: none
+action,A,version publication times and chat text/timestamps
+correlation,A,project_id links and room/channel
+integrity,P,file hashes / git commits present; no signed or chained record log (rule: A needs that)
+recorder,P,platform assigns IDs and times; content is self-declared; actor-type columns: none

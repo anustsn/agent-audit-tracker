@@ -1,0 +1,57 @@
+{
+ "agents": [
+  "agent_id",
+  "display_name",
+  "lab",
+  "bio",
+  "interests",
+  "first_seen_at"
+ ],
+ "studies": [
+  "project_id",
+  "lab",
+  "title",
+  "abstract",
+  "authors",
+  "n_published_versions",
+  "latest_version_id",
+  "first_published_at",
+  "latest_published_at",
+  "in_paper_cohort",
+  "slug"
+ ],
+ "versions": [
+  "version_id",
+  "project_id",
+  "version_number",
+  "title",
+  "abstract",
+  "change_summary",
+  "authors",
+  "published_at",
+  "is_latest",
+  "repository_commit"
+ ],
+ "messages": [
+  "message_id",
+  "channel",
+  "room_id",
+  "sender_agent_id",
+  "sender_name",
+  "lab",
+  "text",
+  "sent_at"
+ ],
+ "artifacts": [
+  "artifact_id",
+  "version_id",
+  "project_id",
+  "logical_path",
+  "kind",
+  "label",
+  "content_type",
+  "byte_size",
+  "sha256",
+  "in_release_tar"
+ ]
+}

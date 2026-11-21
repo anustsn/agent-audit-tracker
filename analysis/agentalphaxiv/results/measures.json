@@ -1,0 +1,171 @@
+{
+ "revision": "cc892aab131be3872283e1a778af663382315817",
+ "M1_coverage": {
+  "messages.sender_agent_id": {
+   "n": 9052,
+   "k": 9052,
+   "share": 1.0
+  },
+  "messages.sender_name": {
+   "n": 9052,
+   "k": 9052,
+   "share": 1.0
+  },
+  "messages.text": {
+   "n": 9052,
+   "k": 9052,
+   "share": 1.0
+  },
+  "messages.sent_at": {
+   "n": 9052,
+   "k": 9052,
+   "share": 1.0
+  },
+  "versions.published_at": {
+   "n": 1352,
+   "k": 1352,
+   "share": 1.0
+  },
+  "versions.change_summary": {
+   "n": 1352,
+   "k": 910,
+   "share": 0.6730769230769231
+  },
+  "versions.authors": {
+   "n": 1352,
+   "k": 1352,
+   "share": 1.0
+  },
+  "studies.authors": {
+   "n": 916,
+   "k": 916,
+   "share": 1.0
+  },
+  "agents.lab": {
+   "n": 896,
+   "k": 804,
+   "share": 0.8973214285714286
+  },
+  "studies.lab": {
+   "n": 916,
+   "k": 916,
+   "share": 1.0
+  },
+  "messages.lab": {
+   "n": 9052,
+   "k": 8531,
+   "share": 0.9424436588599204
+  }
+ },
+ "M2_author_attribution": {
+  "n_studies": 916,
+  "counts": {
+   "all_linked": 895,
+   "some_linked": 13,
+   "none_linked": 8
+  },
+  "share_none_linked": 0.008733624454148471
+ },
+ "M3_self_labels": {
+  "n_messages": 9052,
+  "with_self_label": 1183,
+  "label_contains_own_name": 129,
+  "label_names_other_agent_only": 9,
+  "share_with_label": 0.13068935041979673
+ },
+ "M4_lab_nulls": {
+  "agents": {
+   "n": 896,
+   "k": 92,
+   "share": 0.10267857142857142
+  },
+  "messages": {
+   "n": 9052,
+   "k": 521,
+   "share": 0.05755634114007954
+  },
+  "studies": {
+   "n": 916,
+   "k": 0,
+   "share": 0.0
+  }
+ },
+ "M5_integrity": {
+  "artifacts_sha256_wellformed": {
+   "n": 82805,
+   "k": 82805,
+   "share": 1.0
+  },
+  "versions_git_commit_wellformed": {
+   "n": 1352,
+   "k": 68,
+   "share": 0.05029585798816568
+  }
+ },
+ "M6_linkability": {
+  "artifacts_project_resolves": {
+   "n": 82805,
+   "k": 82805,
+   "share": 1.0
+  },
+  "versions_project_resolves": {
+   "n": 1352,
+   "k": 1352,
+   "share": 1.0
+  },
+  "messages_room_or_channel": {
+   "n": 9052,
+   "k": 9052,
+   "share": 1.0
+  }
+ },
+ "M7_actor_type": {
+  "columns_matching": []
+ },
+ "M8_authority_columns": {
+  "verified": [],
+  "credential": [],
+  "decision": [],
+  "tool": []
+ },
+ "tool_environment_files": {
+  "kind_values": {
+   "result": 19454,
+   "report": 16509,
+   "evaluation": 10767,
+   "run_log": 10015,
+   "code": 7451,
+   "data": 5094,
+   "figure": 4370,
+   "other": 3415,
+   "paper_source": 1679,
+   "agent_trace": 1564,
+   "paper": 1356,
+   "environment": 1089,
+   "experiment_graph": 23,
+   "checkpoint": 19
+  },
+  "environment_like_files": {
+   "n": 82805,
+   "k": 1099,
+   "share": 0.013272145401847714
+  }
+ },
+ "row_counts": {
+  "agents": 896,
+  "studies": 916,
+  "versions": 1352,
+  "messages": 9052,
+  "artifacts": 82805
+ },
+ "row_counts_match_card": {
+  "agents": true,
+  "studies": true,
+  "versions": true,
+  "messages": true,
+  "artifacts": true
+ },
+ "access_method": "datasets-server /rows API (JSON); see PROTOCOL.md deviation 1",
+ "protocol_sha256": "d029d8eb942c6f7d22016cb8ec769a6858ee78c3fa816a28c8322cacd4ea7926",
+ "run_at_utc": "2026-11-20T16:05:53+00:00"
+}
