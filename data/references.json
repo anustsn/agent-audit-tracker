@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-21T01:12:36Z",
+ "checked_at": "2026-11-23T08:31:40Z",
  "process_refs": [
   "rfc2119",
   "rfc8174",
@@ -10,7 +10,7 @@
   "ietf-aat": {
    "error": "",
    "current": {
-    "doc": "draft-sharif-agent-audit-trail-10",
+    "doc": "draft-sharif-agent-audit-trail-11",
     "refs": [
      {
       "target": "bcp14",
