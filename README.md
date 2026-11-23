@@ -120,7 +120,7 @@ These analyses sit in the repository and do not change the page. Both are part o
 - [`analysis/questions_nist_crosswalk.md`](analysis/questions_nist_crosswalk.md): the basis of the ten evidence questions in NIST SP 800-53 Rev. 5.
 - [`analysis/agentalphaxiv/`](analysis/agentalphaxiv/): a case study that applies the ten questions to the public records of a real multi-agent research platform. The protocol was written before the analysis.
 
-Preprint: Enkhzorigt, A. (2026). *Required as a capability, not as a record: accountability evidence for AI agent actions in NIST SP 800-53, OpenTelemetry GenAI telemetry and a multi-agent platform's public records*. Zenodo. https://doi.org/10.5281/zenodo.24405379
+Preprint: Enkhzorigt, A. (2026). *Required as a capability, not as a record: accountability evidence for AI agent actions in NIST SP 800-53, OpenTelemetry GenAI telemetry and a multi-agent platform's public records*. Zenodo (all versions; resolves to the latest). https://doi.org/10.5281/zenodo.24405378
 
 ## Related
 - [agent-telemetry-coverage](https://github.com/anustsn/agent-telemetry-coverage): which OWASP agentic and MCP monitoring requirements the OpenTelemetry GenAI conventions can evidence. The signal codes in the matrix (S01 to S34) and the requirement links come from its catalogue.
