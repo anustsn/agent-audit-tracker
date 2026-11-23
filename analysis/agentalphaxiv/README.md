@@ -10,10 +10,11 @@ It does not change the dashboard.
 |---|---|
 | `PROTOCOL.md` | Question, expectation, scoring rule and measures, written before any analysis |
 | `aax_measures.py` | Measures M1–M8 (pandas only; executes no dataset code) |
+| `author_match.py` | Author-string match to the agents table (question 1; added in v1.1) |
 | `accountability_case_study.ipynb` | Google Colab notebook: loads five tables at a pinned revision, computes the measures, writes `results/` |
 | `results/` | `SUMMARY.md`, `question_table.csv`, `measures.json`, `all_columns.json`, `review_cross_label_messages.csv` |
 
-**Status:** run on 2026-11-20 (see `results/SUMMARY.md`). The maintainer confirmed the scores and the 9 cross-label messages on 2026-11-21.
+**Status:** run on 2026-11-20 (see `results/SUMMARY.md`). The maintainer confirmed the scores and the 9 cross-label messages on 2026-11-21. In v1.1 (23 Nov 2026), questions 6 and 8 were rescored under the written rule and untraceable figures were removed (see Corrections in `results/SUMMARY.md`).
 
 **To run:** open the notebook in Google Colab (File → Upload notebook) and run all cells. It downloads about 12 MB.
 
@@ -24,4 +25,4 @@ It does not change the dashboard.
 
 ## Publication
 
-Part of the preprint: https://doi.org/10.5281/zenodo.24405379
+Part of the preprint (all versions; resolves to the latest): https://doi.org/10.5281/zenodo.24405378
