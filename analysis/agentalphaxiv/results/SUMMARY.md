@@ -7,27 +7,27 @@
 | Data | `alphaXiv/AgentAlphaXiv` revision `cc892aab`, the same before and after the download |
 | Row counts | All five tables match the dataset card: 896 / 916 / 1,352 / 9,052 / 82,805. Every row ID is unique. |
 | Access | datasets-server `/rows` API (protocol deviation 1) |
-| Detail | Every measure is in `measures.json`; the score table is `question_table.csv` |
+| Detail | Every measure is in `measures.json`, except the author-string match (`../author_match.py`, added in v1.1); the score table is `question_table.csv` |
 
 ## Scores (rule in protocol section 5)
 
 | # | Question | Score | Evidence in the public records |
 |---|---|---|---|
-| 1 | Which agent acted? | **P** | Chat: the platform assigns a sender ID to 100% of 9,052 messages. Papers: authors are a free-text field. 944 of 951 author strings use the platform's agent names; 7 do not. |
+| 1 | Which agent acted? | **P** | Chat: the platform assigns a sender ID to 100% of 9,052 messages. Papers: authors are a free-text field. 916 of 951 author strings match an agent in the released agents table; 28 more use agent-style names absent from it, and 7 use other names (`../author_match.py`). |
 | 2 | Was the identity verified? | **N** | No column records verification or its level. |
-| 3 | On whose behalf? | **P** | Only a lab pseudonym. The release replaced operator accounts with lab pseudonyms (31 labs) and redacted names and emails, so the mapping exists at the platform but is not public. The pseudonym is missing for 10.3% of agents (92) and 5.8% of messages. |
+| 3 | On whose behalf? | **P** | Only a lab pseudonym. The release replaced operator accounts with lab pseudonyms (31 labs in the released agents table; the platform's report counts 35) and redacted names and emails, so the mapping exists at the platform but is not public. The pseudonym is missing for 10.3% of agents (92) and 5.8% of messages. |
 | 4 | Which credential or token? | **N** | No column. |
 | 5 | Was the action authorised, under which policy? | **N** | No column. |
-| 6 | Which tool and version? | **P** | No tool or version column. At version level, 63.5% of versions (858 of 1,352) list an environment file and 92.3% list an agent trace, but only as file paths; which tool and version served which action is not recorded. Opening the files could describe their content but could not change the score: per-action tool versions are not a field of the record. |
+| 6 | Which tool and version? | **N** | No tool or version column. Artifacts of kind `environment` (1,089) and `agent_trace` (1,564) are listed as file paths only (`measures.json`, `tool_environment_files`); which tool and version served which action is not recorded. Opening the files could describe their content but could not change the score: per-action tool versions are not a field of the record. |
 | 7 | What action, with what outcome? | **A** | Publication time for 100% of versions; text and time for 100% of messages. A change summary exists for 67.3% of versions. |
-| 8 | Can records be linked? | **A** | 100% of artifacts and versions resolve to a study. 100% of messages have a room or channel. Chat messages have no study field; only 31.7% (2,865) mention a study or version ID in their text. |
-| 9 | Is the record tamper-evident? | **P** | 100% of artifacts have a well-formed SHA-256. Only 5.0% of versions (68 of 1,352) carry a git commit. The record log itself is not signed or hash-chained, and none of the 1,840 released files is a signature or signed manifest. |
+| 8 | Can records be linked? | **P** | 100% of artifacts and versions resolve to a study. 100% of messages have a room or channel. Chat messages have no study field, so the column answers only part of the question (rule in protocol section 5). |
+| 9 | Is the record tamper-evident? | **P** | 100% of artifacts have a well-formed SHA-256. Only 5.0% of versions (68 of 1,352) carry a git commit. The record log itself is not signed or hash-chained, and the released file list contains no signature or signed manifest. |
 | 10 | Who writes the record? | **P** | The platform assigns IDs and timestamps, but the content (text, author strings, self-labels) is written by the agents. No column distinguishes human from agent actions. |
 
 ## Compared with the stated expectation (protocol section 2)
 
 - **Content questions.**
-  - Action and correlation are **A**, as expected.
+  - Action is **A**, as expected. Correlation was expected to be **A** but is **P** after the v1.1 rescoring (see Corrections).
   - Integrity is **P**, not A. File hashes exist, but by the pre-set rule an unsigned log cannot score A.
 - **Actor questions**, all as expected:
   - verified, credential and decision are **N**;
@@ -60,7 +60,16 @@
 - **Public release only.** Operator accounts were deliberately replaced by lab pseudonyms for privacy. So the *principal* gap partly reflects the release, not necessarily the platform's internal logs. This tension between privacy and accountability is itself a finding to report.
 - **Bracketed labels (M3)** are a simple convention test. Informal labels are not counted as impersonation.
 
+## Corrections (v1.1, 23 Nov 2026)
+
+- **Question 1:** v1.0 reported 944 of 951 author strings as platform agent names. That count included 28 agent-style names that are absent from the released agents table. The strict match is 916 of 951 (`../author_match.py`).
+- **Question 6: P → N.** No column records which tool and version served an action. The file paths do not change this.
+- **Question 8: A → P.** Chat messages have no study field, so the column answers only part of the question (protocol section 5).
+- **Removed figures:** 63.5% (858), 92.3%, 31.7% (2,865) and "1,840 released files". The archived code does not produce them.
+- **Lab count:** 31 labs in the released agents table; the platform's report counts 35.
+- The other figures are unchanged and appear in `measures.json`.
+
 ## Data and attribution
 
-- **Data:** alphaXiv/AgentAlphaXiv (Hugging Face), revision `cc892aab`, snapshot of 17 Nov 2026, licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). The tables were analysed without modification. The derived counts and scores are ours.
+- **Data:** alphaXiv/AgentAlphaXiv (Hugging Face), revision `cc892aab`, dataset created 17 Nov 2026, revision dated 20 Nov 2026, licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). The tables were analysed without modification. The derived counts and scores are ours.
 - **Report:** R. Ahmad et al., "A Society of AI Scientists", alphaXiv 2611.society-ai-scientists, November 2026.
