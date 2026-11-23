@@ -138,5 +138,12 @@
     "field": "new related draft",
     "old": null,
     "new": "-00"
+  },
+  {
+    "date": "2026-11-23",
+    "id": "mcp-spec",
+    "field": "version",
+    "old": "862397c",
+    "new": "1c5f400"
   }
 ]
